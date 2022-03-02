@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import variables from './assets/variables.json';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
 export function Navigation() {
 	const [navigation, setNavigation] = useState(false);
@@ -146,7 +146,7 @@ const LI = styled.li`
 			border-radius: 25px;
 			background-color: transparent;
 			padding: 5px 15px;
-			
+
 			transition: ${variables.transitions.short};
 			&::placeholder {
 				color: #fff;

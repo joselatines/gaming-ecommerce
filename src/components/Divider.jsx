@@ -5,6 +5,7 @@ import chair from './assets/img/chair.png';
 import headset from './assets/img/headset.png';
 import keyboard from './assets/img/keyboard.png';
 
+import { Slider } from './Slider';
 export function Divider() {
 	return (
 		<Container>
@@ -14,21 +15,7 @@ export function Divider() {
 				</p>
 			</Left>
 			<Right>
-				<Card>
-					<img
-						src='https://assets.spartangeek.com/cc/ew-thor-1_200106_021015.png'
-						alt='pc gamer'
-					/>
-				</Card>
-				<Card>
-					<img src={chair} alt='gaming chair' />
-				</Card>
-				<Card>
-					<img src={headset} alt='gaming headset' />
-				</Card>
-				<Card>
-					<img src={keyboard} alt='gaming keyboard' />
-				</Card>
+				<Slider />
 			</Right>
 		</Container>
 	);
@@ -42,6 +29,9 @@ const Container = styled.section`
 	justify-content: space-evenly;
 	align-items: center;
 	flex-wrap: wrap;
+	@media (max-width: ${variables.mediaQueries.tablet}) {
+		flex-direction: column;
+	}
 `;
 
 const Left = styled.div`
@@ -54,15 +44,5 @@ const Left = styled.div`
 	}
 `;
 const Right = styled.div`
-	display: flex;
-	gap: 15px;
-`;
-const Card = styled.div`
-	max-width: 150px;
-	height: auto;
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
+	flex-basis: 50%;
 `;
