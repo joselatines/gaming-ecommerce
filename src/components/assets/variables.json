@@ -2,8 +2,9 @@
 	"colors": {
 		"primary": "#A355EE",
 		"secondary": "#000",
-		"bg": "#22252A",
-		"font": "#020202"
+		"bg": "#fff",
+		"bg_dark": "#22252A",
+		"font": "#22252A"
 	},
 	"mediaQueries": {
 		"mobile_l": "425px",

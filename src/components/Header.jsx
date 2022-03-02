@@ -23,7 +23,7 @@ const bgIMG =
 const HeaderContainer = styled.header`
 	background: url(${bgIMG}) center no-repeat fixed;
 	background-size: cover;
-	background-color: red;
+	background-color: ${variables.colors.bg};
 	height: 100vh;
 	width: 100%;
 	overflow: hidden;

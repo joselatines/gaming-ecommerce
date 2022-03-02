@@ -104,7 +104,7 @@ const ContainerUL = styled.ul`
 	align-items: center;
 	transition: all ${variables.transitions.short};
 	@media (max-width: ${variables.mediaQueries.tablet}) {
-		background-color: ${variables.colors.bg};
+		background-color: ${variables.colors.bg_dark};
 		position: absolute;
 		z-index: 99;
 		left: 0;
@@ -183,7 +183,7 @@ const Dropdown = styled(ContainerUL)`
 `;
 const DropdownContent = styled.section`
 	transition: all ${variables.transitions.short};
-	background-color: ${variables.colors.bg};
+	background-color: ${variables.colors.bg_dark};
 	opacity: 0;
 	color: #fff;
 	position: absolute;
