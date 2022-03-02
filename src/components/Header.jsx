@@ -18,7 +18,7 @@ export function Header() {
 }
 
 const bgIMG =
-	'https://images.unsplash.com/photo-1551033541-2075d8363c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80';
+	'https://wallpapercave.com/wp/wp8937965.jpg';
 
 const HeaderContainer = styled.header`
 	background: url(${bgIMG}) center no-repeat fixed;
