@@ -1,0 +1,146 @@
+import styled, { css } from 'styled-components';
+import variables from './assets/variables.json';
+import { Fragment, useState } from 'react';
+
+export function Navigation() {
+	const [navigation, setNavigation] = useState(false);
+
+	const showNavigation = () => {
+		setNavigation(!navigation);
+	};
+
+	return (
+		<Container>
+			<Logo>DRX Ecommerce</Logo>
+			<Hamburger active={navigation} onClick={showNavigation}>
+				<Bar></Bar>
+				<Bar></Bar>
+				<Bar></Bar>
+			</Hamburger>
+			<ContainerUL show={navigation}>
+				<Dropdown>
+					<div>
+						<span>Dropdown</span>
+						<ion-icon name='chevron-down-outline'></ion-icon>
+					</div>
+					<DropdownContent>
+						<li>Item 1</li>
+						<li>Item 2</li>
+					</DropdownContent>
+				</Dropdown>
+				<LI>
+					<ion-icon name='search-outline'></ion-icon>
+				</LI>
+				<LI>
+					<ion-icon name='person-circle-outline'></ion-icon>
+				</LI>
+				<LI>
+					<ion-icon name='cart-outline'></ion-icon>
+				</LI>
+			</ContainerUL>
+		</Container>
+	);
+}
+
+const Container = styled.div`
+	color: #fff;
+	padding: 15px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 101;
+	width: 100%;
+	top: 0;
+	left: 0;
+`;
+
+const Logo = styled.span`
+	font-weight: 700;
+	font-size: 1.5rem;
+`;
+
+const Hamburger = styled.div`
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	right: 30px;
+	z-index: 100;
+	${(props) =>
+		props.active &&
+		css`
+			span:nth-child(2) {
+				opacity: 0;
+			}
+			span:nth-child(1) {
+				transform: translateY(8px) rotate(45deg);
+			}
+			span:nth-child(3) {
+				transform: translateY(-8px) rotate(-45deg);
+			}
+		`}
+
+	@media (max-width: ${variables.mediaQueries.tablet}) {
+		display: block;
+	}
+`;
+
+const Bar = styled.span`
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #fff;
+`;
+
+const ContainerUL = styled.ul`
+	list-style: none;
+	color: #fff;
+	gap: 15px;
+	display: flex;
+	align-items: center;
+	transition: all ${variables.transitions.short};
+	@media (max-width: ${variables.mediaQueries.tablet}) {
+		background-color: ${variables.colors.bg};
+		position: absolute;
+		z-index: 99;
+		left: 0;
+		/* top: -1000px; */
+		top: ${(props) => (props.show ? '-1000px' :0 )};
+		width: 100%;
+		flex-direction: column;
+		padding: 20px;
+		div {
+			display: block;
+			position: relative;
+		}
+	}
+`;
+
+const LI = styled.li`
+	font-size: 25px;
+	cursor: pointer;
+`;
+
+const Dropdown = styled(ContainerUL)`
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		div {
+			display: block;
+		}
+	}
+`;
+const DropdownContent = styled.div`
+	
+	color: #fff;
+	position: absolute;
+	top: 22px;
+	width: 100%;
+	padding: 5px;
+	display: none;
+`;

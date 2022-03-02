@@ -1,0 +1,16 @@
+{
+	"colors": {
+		"primary": "#000",
+		"secondary": "#000",
+		"bg": "#22252A",
+		"font": "#020202"
+	},
+	"mediaQueries": {
+		"mobile_l": "425px",
+		"tablet": "768px",
+		"laptop": "1024px"
+	},
+    "transitions": {
+        "short": "ease-in-out .5s"
+    }
+}
