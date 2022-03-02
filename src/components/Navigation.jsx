@@ -28,7 +28,8 @@ export function Navigation() {
 						<li>Item 2</li>
 					</DropdownContent>
 				</Dropdown>
-				<LI>
+				<LI className='searchContainer'>
+					<input type='text' name='' id='' placeholder='Search something' />
 					<ion-icon name='search-outline'></ion-icon>
 				</LI>
 				<LI>
@@ -107,8 +108,7 @@ const ContainerUL = styled.ul`
 		position: absolute;
 		z-index: 99;
 		left: 0;
-		/* top: -1000px; */
-		top: ${(props) => (props.show ? '-1000px' :0 )};
+		top: ${(props) => (props.show ? 0 : '-1000px')};
 		width: 100%;
 		flex-direction: column;
 		padding: 20px;
@@ -116,31 +116,86 @@ const ContainerUL = styled.ul`
 			display: block;
 			position: relative;
 		}
+		section {
+			position: relative;
+			display: block;
+			opacity: 1;
+			top: unset;
+			li {
+				margin-top: 10px;
+			}
+		}
 	}
 `;
 
 const LI = styled.li`
 	font-size: 25px;
 	cursor: pointer;
+	&.searchContainer {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		transition: ${variables.transitions.short};
+		input {
+			outline: none;
+			border: solid #fff 2px;
+			opacity: 0.7;
+			color: #fff;
+			border-radius: 25px;
+			background-color: transparent;
+			padding: 5px 15px;
+			
+			transition: ${variables.transitions.short};
+			&::placeholder {
+				color: #fff;
+			}
+			&:focus {
+				opacity: 1;
+			}
+		}
+		ion-icon {
+			position: absolute;
+			right: 10px;
+			font-size: 20px;
+			border-radius: 25px;
+			z-index: -1;
+		}
+	}
 `;
 
 const Dropdown = styled(ContainerUL)`
 	display: inline-block;
+	top: unset;
 	position: relative;
 	text-align: center;
 	cursor: pointer;
+	transition: all ${variables.transitions.short};
 	&:hover {
-		div {
+		// Dropdown content
+		section {
 			display: block;
+			opacity: 1;
+			background-color: none;
 		}
 	}
 `;
-const DropdownContent = styled.div`
-	
+const DropdownContent = styled.section`
+	transition: all ${variables.transitions.short};
+	background-color: ${variables.colors.bg};
+	opacity: 0;
 	color: #fff;
 	position: absolute;
 	top: 22px;
 	width: 100%;
-	padding: 5px;
-	display: none;
+	padding: 5px 10px;
+	li {
+		transition: ${variables.transitions.short};
+		position: relative;
+		left: 0px;
+		&:hover {
+			left: 5px;
+		}
+	}
 `;
