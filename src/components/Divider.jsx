@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 import variables from './assets/variables.json';
-import chair from './assets/img/chair.png';
-import headset from './assets/img/headset.png';
-import keyboard from './assets/img/keyboard.png';
 
 import { Slider } from './Slider';
 export function Divider() {
