@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import image1 from './assets/img/chair.png';
-import image2 from './assets/img/headset.png';
-import image3 from './assets/img/keyboard.png';
-import image4 from './assets/img/light.png';
+import image1 from './assets/img/pc.png';
+import image2 from './assets/img/chair.png';
+import image3 from './assets/img/headset.png';
+import image4 from './assets/img/keyboard.png';
+import image5 from './assets/img/light.png';
 
-const images = [image1, image2, image3, image4];
-
+const images = [image1, image2, image3, image4, image5];
+let id = 0;
 export function Slider() {
 	return (
 		<Container>
@@ -18,9 +19,10 @@ export function Slider() {
 					dragConstraints={{ right: 0, left: 0 }}
 				>
 					{images.map((image) => (
-						<motion.div className='item'>
+						<motion.div key={id++} className='item'>
 							<img src={image} alt='' />
 						</motion.div>
+							
 					))}
 				</motion.div>
 			</motion.div>

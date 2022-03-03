@@ -1,7 +1,7 @@
 {
 	"colors": {
 		"primary": "#A355EE",
-		"secondary": "#000",
+		"secondary": "#5D98FF",
 		"bg": "#fff",
 		"bg_dark": "#22252A",
 		"font": "#22252A"
@@ -11,7 +11,7 @@
 		"tablet": "768px",
 		"laptop": "1024px"
 	},
-    "transitions": {
-        "short": "ease-in-out .5s"
-    }
+	"transitions": {
+		"short": "ease-in-out .5s"
+	}
 }
