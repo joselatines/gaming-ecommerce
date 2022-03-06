@@ -6,7 +6,6 @@ import { Product } from './Product';
 
 export function Products() {
 	const array2 = products.computers.gamers;
-	console.log(array2);
 	return (
 		<Container>
 			{array2.map((e) => (

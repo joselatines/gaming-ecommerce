@@ -2,42 +2,53 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import variables from './assets/variables.json';
-import { Button } from './Button';
 
 // To use this components you need to use ionics CDN
-export function Aside() {
+export function Aside(props) {
 	const [ulActive, setUlActive] = useState(false);
-	return (
-		<Container>
-			<Button color={variables.colors.primary} content='Hllo wor' />
-			<AsideNav>
-				<div className={`aside__element ${ulActive ? 'active' : ''}`}>
+	let toggle;
+	const data = props.productsData;
+
+	const toggleDropDown = (e) => {
+		e.currentTarget.classList.toggle('active');
+	};
+
+	const createNavElement = () => {
+		let html = [];
+
+		const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
+		const createLi = (objProperty) => {
+			let id = 0;
+			let keys = Object.keys(objProperty);
+			return keys.map((li) => <li key={id++}>{capitalize(li)}</li>);
+		};
+
+		for (const iterator in data) {
+			html.push(
+				<div
+					key={html.length}
+					className={`aside__element`}
+					onClick={(e) => toggleDropDown(e)}
+				>
 					<div
 						onClick={() => setUlActive(!ulActive)}
 						className='aside__element--title'
 					>
 						<ion-icon name='chevron-forward-outline'></ion-icon>
-						<span>Computer</span>
+						<span>{capitalize(iterator)}</span>
 					</div>
-					<ul className='aside__element--ul'>
-						<li>Gamers</li>
-						<li>Office</li>
-						<li>Kids</li>
-					</ul>
+					<ul className='aside__element--ul'>{createLi(data[iterator])}</ul>
 				</div>
+			);
+		}
 
-				<div className='aside__element'>
-					<div className='aside__element--title'>
-						<ion-icon name='chevron-forward-outline'></ion-icon>
-						<span>Computer</span>
-					</div>
-					<ul className='aside__element--ul'>
-						<li>Gamers</li>
-						<li>Office</li>
-						<li>Kids</li>
-					</ul>
-				</div>
-			</AsideNav>
+		return html;
+	};
+
+	return (
+		<Container>
+			<AsideNav>{createNavElement()}</AsideNav>
 		</Container>
 	);
 }
@@ -51,9 +62,9 @@ const AsideNav = styled.nav`
 	display: grid;
 	gap: 10px;
 	.aside__element {
+		transition: max-height ${variables.transitions.short};
 		max-height: 25px;
 		overflow-y: clip;
-		transition: max-height ${variables.transitions.short};
 		.aside__element--title {
 			position: relative;
 			display: grid;
@@ -76,6 +87,9 @@ const AsideNav = styled.nav`
 		}
 	}
 	.active {
-		max-height: unset;
+		max-height: fit-content;
+		ion-icon {
+			transform: rotate(90deg);
+		}
 	}
 `;

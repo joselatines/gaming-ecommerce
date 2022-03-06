@@ -46,53 +46,131 @@
 		],
 		"kids": [{}]
 	},
-	"processors": {
-		"intel": [
+	"components": {
+		"processors": {
+			"intel": [
+				{
+					"id": 0,
+					"rating": 4.7,
+					"price": 888,
+					"old_price": 1500,
+					"brand": "intel",
+					"type": "processor",
+					"title": "Processor Intel",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.7L_3COGIbxJsXZs2EbCIFQHaH9%26pid%3DApi&f=1"
+				},
+				{
+					"id": 1,
+					"rating": 1,
+					"price": 555,
+					"old_price": 1500,
+					"brand": "intel",
+					"type": "processor",
+					"title": "Processor Intel",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.7L_3COGIbxJsXZs2EbCIFQHaH9%26pid%3DApi&f=1"
+				}
+			],
+			"amd": [
+				{
+					"id": 0,
+					"rating": 4.7,
+					"price": 888,
+					"old_price": 1500,
+					"brand": "amd",
+					"type": "processor",
+					"title": "Processor amd",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3lY11KTmLRG8hsa5KwWFLgHaEK%26pid%3DApi&f=1"
+				},
+				{
+					"id": 1,
+					"rating": 1,
+					"price": 555,
+					"old_price": 1500,
+					"brand": "amd",
+					"type": "processor",
+					"title": "Processor amd",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3lY11KTmLRG8hsa5KwWFLgHaEK%26pid%3DApi&f=1"
+				}
+			]
+		},
+		"rams": {
+			"intel": [
+				{
+					"id": 0,
+					"rating": 4.7,
+					"price": 888,
+					"old_price": 1500,
+					"brand": "intel",
+					"type": "processor",
+					"title": "Processor Intel",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.7L_3COGIbxJsXZs2EbCIFQHaH9%26pid%3DApi&f=1"
+				},
+				{
+					"id": 1,
+					"rating": 1,
+					"price": 555,
+					"old_price": 1500,
+					"brand": "intel",
+					"type": "processor",
+					"title": "Processor Intel",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.7L_3COGIbxJsXZs2EbCIFQHaH9%26pid%3DApi&f=1"
+				}
+			],
+			"amd": [
+				{
+					"id": 0,
+					"rating": 4.7,
+					"price": 888,
+					"old_price": 1500,
+					"brand": "amd",
+					"type": "processor",
+					"title": "Processor amd",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3lY11KTmLRG8hsa5KwWFLgHaEK%26pid%3DApi&f=1"
+				},
+				{
+					"id": 1,
+					"rating": 1,
+					"price": 555,
+					"old_price": 1500,
+					"brand": "amd",
+					"type": "processor",
+					"title": "Processor amd",
+					"description": "Eligible for Shipping To Mars or somewhere else",
+					"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3lY11KTmLRG8hsa5KwWFLgHaEK%26pid%3DApi&f=1"
+				}
+			]
+		}
+	},
+	"accessories": {
+		"lights": [
 			{
 				"id": 0,
-				"rating": 4.7,
-				"price": 888,
-				"old_price": 1500,
-				"brand": "intel",
-				"type": "processor",
-				"title": "Processor Intel",
-				"description": "Eligible for Shipping To Mars or somewhere else",
-				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.7L_3COGIbxJsXZs2EbCIFQHaH9%26pid%3DApi&f=1"
+				"price": 10,
+				"brand": "intel"
 			},
 			{
 				"id": 1,
-				"rating": 1,
-				"price": 555,
-				"old_price": 1500,
-				"brand": "intel",
-				"type": "processor",
-				"title": "Processor Intel",
-				"description": "Eligible for Shipping To Mars or somewhere else",
-				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.7L_3COGIbxJsXZs2EbCIFQHaH9%26pid%3DApi&f=1"
+				"price": 10,
+				"brand": "intel"
 			}
 		],
-		"amd": [
+		"chairs": [
 			{
 				"id": 0,
-				"rating": 4.7,
-				"price": 888,
-				"old_price": 1500,
-				"brand": "amd",
-				"type": "processor",
-				"title": "Processor amd",
-				"description": "Eligible for Shipping To Mars or somewhere else",
-				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3lY11KTmLRG8hsa5KwWFLgHaEK%26pid%3DApi&f=1"
+				"price": 10,
+				"brand": "intel"
 			},
 			{
 				"id": 1,
-				"rating": 1,
-				"price": 555,
-				"old_price": 1500,
-				"brand": "amd",
-				"type": "processor",
-				"title": "Processor amd",
-				"description": "Eligible for Shipping To Mars or somewhere else",
-				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3lY11KTmLRG8hsa5KwWFLgHaEK%26pid%3DApi&f=1"
+				"price": 10,
+				"brand": "intel"
 			}
 		]
 	}

@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 import { Aside } from './Aside';
 import { Products } from './Products';
-export function MainSection() {
+export function MainSection(props) {
 	return (
 		<Container>
-			<Aside />
-			<Products />
+			<Aside productsData={props.productsData} />
+			<Products productsData={props.productsData} />
 		</Container>
 	);
 }
@@ -20,6 +20,6 @@ const Container = styled.main`
 		grid-area: aside;
 	}
 	Products {
-		grid-area: main; 
+		grid-area: main;
 	}
 `;
