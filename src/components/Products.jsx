@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Product } from './Product';
 export function Products(props) {
-	const array2 = props.productsData.components.processors;
+	const array2 = props.productsData;
 	return (
 		<Container>
 			{array2.map((el) => (

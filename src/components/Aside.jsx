@@ -5,10 +5,6 @@ import variables from './assets/variables.json';
 
 // To use this components you need to use ionics CDN
 export function Aside(props) {
-	const changeProducts = (e) => {
-	
-		/* props.setDataProducts(props.productsData.components.processors); */
-	};
 
 	const data = props.productsData;
 
@@ -21,7 +17,7 @@ export function Aside(props) {
 			let id = 0;
 			let keys = Object.keys(objProperty);
 			return keys.map((li) => (
-				<li onClick={changeProducts} key={id++}>
+				<li onClick={(e) => props.changeDataProducts(e.target.innerHTML)} key={id++}>
 					{capitalize(li)}
 				</li>
 			));
@@ -84,6 +80,9 @@ const AsideNav = styled.nav`
 			list-style-type: none;
 			line-height: 22px;
 			margin-left: 20px;
+			li {
+				cursor: pointer;
+			}
 		}
 	}
 	.active {

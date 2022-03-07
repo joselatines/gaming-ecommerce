@@ -8,7 +8,7 @@ import { MainSection } from './components/MainSection';
 import products from './components/assets/products.json';
 
 export function App() {
-	const [dataProducts, setDataProducts] = useState(products);
+	const [dataProducts, changeDataProducts] = useState(products);
 
 	return (
 		<Fragment>
@@ -17,7 +17,7 @@ export function App() {
 			<Divider />
 			<MainSection
 				productsData={dataProducts}
-				setDataProducts={setDataProducts}
+				changeDataProducts={changeDataProducts}
 			/>
 		</Fragment>
 	);
