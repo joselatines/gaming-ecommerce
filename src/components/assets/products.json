@@ -4,8 +4,8 @@
 			{
 				"id": 0,
 				"rating": 4.7,
-				"price": 900,
-				"old_price": 1500,
+				"price": 1799.99,
+				"old_price": 2000.99,
 				"type": "pc",
 				"title": "Xtreme PC Gamer AMD Radeon RX",
 				"description": "Eligible for Shipping To Mars or somewhere else",
@@ -13,9 +13,9 @@
 			},
 			{
 				"id": 1,
-				"rating": 4.7,
-				"price": 900,
-				"old_price": 1500,
+				"rating": 3,
+				"price": 1699.99,
+				"old_price": null,
 				"type": "pc",
 				"title": "Xtreme PC Gamer AMD Radeon RX",
 				"description": "Eligible for Shipping To Mars or somewhere else",
@@ -25,9 +25,9 @@
 		"kids": [
 			{
 				"id": 0,
-				"rating": 4.7,
-				"price": 300,
-				"old_price": 1500,
+				"rating": 5,
+				"price": 250.99,
+				"old_price": null,
 				"type": "pc",
 				"title": "Office",
 				"description": "Office PC",
@@ -35,9 +35,9 @@
 			},
 			{
 				"id": 1,
-				"rating": 3,
-				"price": 300,
-				"old_price": 1500,
+				"rating": 4.3,
+				"price": 500.99,
+				"old_price": 600.80,
 				"type": "pc",
 				"title": "Office",
 				"description": "Office PC",
@@ -71,7 +71,7 @@
 		"processors": [
 			{
 				"id": 0,
-				"rating": 4.7,
+				"rating": 3,
 				"price": 888,
 				"old_price": 1500,
 				"brand": "intel",
@@ -104,7 +104,7 @@
 			},
 			{
 				"id": 3,
-				"rating": 1,
+				"rating": 3,
 				"price": 555,
 				"old_price": 1500,
 				"brand": "amd",
@@ -129,7 +129,7 @@
 			},
 			{
 				"id": 1,
-				"rating": 1,
+				"rating": 2,
 				"price": 555,
 				"old_price": 1500,
 				"brand": "intel",
@@ -140,7 +140,7 @@
 			},
 			{
 				"id": 2,
-				"rating": 4.7,
+				"rating": 5,
 				"price": 888,
 				"old_price": 1500,
 				"brand": "amd",

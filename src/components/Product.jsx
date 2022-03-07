@@ -7,19 +7,21 @@ import { Button } from './Button';
 export function Product(props) {
 	const { productData } = props;
 
-	const ratings = {
-		sony: 4.7,
-		samsung: 3.4,
-		vizio: 2.3,
-		panasonic: 3.6,
-		phillips: 4.1,
+	const convertToPercentage = (ratingNumber) => {
+		const totalStars = 5;
+		const starPercentage = (ratingNumber / totalStars) * 100;
+		const starPercentageRounded = Math.round(starPercentage / 10) * 10;
+		return starPercentageRounded;
 	};
-	const starsTotal = 5;
 
 	return (
 		<Fragment>
 			{productData.map((product) => (
-				<Container key={product.id}>
+				<Container
+					starScore={convertToPercentage(product.rating)}
+					key={product.id}
+				>
+					{console.log(product.rating)}
 					<div className='product__imgContainer'>
 						<img src={product.image} alt='pc gamer' />
 					</div>
@@ -27,7 +29,9 @@ export function Product(props) {
 						<h2 className='product__content--title'>{product.title}</h2>
 						<div className='product__content--price'>
 							<span className='price--main'>${product.price}</span>
-							<span className='price--old'>${product.old_price}</span>
+							{product.old_price ? (
+								<span className='price--old'>${product.old_price}</span>
+							) : null}
 						</div>
 						<div className='product__content--description'>
 							<p>{product.description}</p>
@@ -40,7 +44,7 @@ export function Product(props) {
 							</div>
 							<Button
 								color={variables.colors.primary}
-								icon={<ion-icon name='heart-outline' ></ion-icon>}
+								icon={<ion-icon name='heart-outline'></ion-icon>}
 								content='Read more'
 							/>
 						</div>
@@ -112,7 +116,8 @@ const Container = styled.div`
 		left: 0;
 		white-space: nowrap;
 		overflow: hidden;
-		width: 80%; // Get a propeerty for this
+		/* width: 80%; // Get a propeerty for this */
+		width: ${(props) => props.starScore}%; // Get a propeerty for this
 	}
 
 	.stars-outer::before {
