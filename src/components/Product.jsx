@@ -18,54 +18,60 @@ export function Product(props) {
 
 	return (
 		<Fragment>
-			{
-				productData.map((product) => (
-					<Container key={product.id}>
-						<div className='product__imgContainer'>
-							<img src={product.image} alt='pc gamer' />
+			{productData.map((product) => (
+				<Container key={product.id}>
+					<div className='product__imgContainer'>
+						<img src={product.image} alt='pc gamer' />
+					</div>
+					<div className='product__content'>
+						<h2 className='product__content--title'>{product.title}</h2>
+						<div className='product__content--price'>
+							<span className='price--main'>${product.price}</span>
+							<span className='price--old'>${product.old_price}</span>
 						</div>
-						<div className='product__content'>
-							<h2 className='product__content--title'>{product.title}</h2>
-							<div className='product__content--price'>
-								<span className='price--main'>${product.price}</span>
-								<span className='price--old'>${product.old_price}</span>
-							</div>
-							<div className='product__content--description'>
-								<p>{product.description}</p>
-							</div>
-							<div className='product__content--ratingAndBtn'>
-								<div className='ratingAndBtn__rating'>
-									<div className='stars-outer'>
-										<div className='stars-inner'></div>
-									</div>
-									<span className='number-rating'>{product.rating}/5</span>
+						<div className='product__content--description'>
+							<p>{product.description}</p>
+						</div>
+						<div className='product__content--ratingAndBtn'>
+							<div className='ratingAndBtn__rating'>
+								<div className='stars-outer'>
+									<div className='stars-inner'></div>
 								</div>
-								<Button content='Read more' />
 							</div>
+							<Button
+								color={variables.colors.primary}
+								icon={<ion-icon name='heart-outline' ></ion-icon>}
+								content='Read more'
+							/>
 						</div>
-					</Container>
-				))
-			}
+					</div>
+				</Container>
+			))}
 		</Fragment>
 	);
 }
 
 const Container = styled.div`
-	width: 200px;
+	width: 15rem;
+	height: auto;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 16px;
 	padding: 15px;
+	background-color: #fff;
+	color: ${variables.colors.font};
 	.product__imgContainer {
 		width: 100%;
+		height: 13rem;
 		img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
 		}
 	}
 	.product__content {
 		display: grid;
 		gap: 10px;
+		padding: 1rem 0;
 		.product__content--title {
 			font-size: 1rem;
 		}
@@ -87,6 +93,12 @@ const Container = styled.div`
 	.product__content--description {
 		font-size: 0.8rem;
 		opacity: 0.9;
+	}
+	.product__content--ratingAndBtn {
+		display: grid;
+		grid-template-columns: auto auto;
+		align-items: center;
+		font-size: 13px;
 	}
 
 	.stars-outer {

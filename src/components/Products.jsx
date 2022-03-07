@@ -15,5 +15,7 @@ export function Products(props) {
 const Container = styled.section`
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 	gap: 20px;
+	padding: 1rem;
 `;

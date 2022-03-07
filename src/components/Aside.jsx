@@ -50,8 +50,8 @@ export function Aside(props) {
 }
 
 const Container = styled.aside`
-	border: solid 2px #0202;
-	padding: 0 25px;
+	border: solid 1px #0202;
+	padding: 1.5rem;
 `;
 
 const AsideNav = styled.nav`
