@@ -5,13 +5,12 @@ import variables from './assets/variables.json';
 
 // To use this components you need to use ionics CDN
 export function Aside(props) {
-	const [ulActive, setUlActive] = useState(false);
-	let toggle;
-	const data = props.productsData;
-
-	const toggleDropDown = (e) => {
-		e.currentTarget.classList.toggle('active');
+	const changeProducts = (e) => {
+	
+		/* props.setDataProducts(props.productsData.components.processors); */
 	};
+
+	const data = props.productsData;
 
 	const createNavElement = () => {
 		let html = [];
@@ -21,7 +20,11 @@ export function Aside(props) {
 		const createLi = (objProperty) => {
 			let id = 0;
 			let keys = Object.keys(objProperty);
-			return keys.map((li) => <li key={id++}>{capitalize(li)}</li>);
+			return keys.map((li) => (
+				<li onClick={changeProducts} key={id++}>
+					{capitalize(li)}
+				</li>
+			));
 		};
 
 		for (const iterator in data) {
@@ -29,12 +32,9 @@ export function Aside(props) {
 				<div
 					key={html.length}
 					className={`aside__element`}
-					onClick={(e) => toggleDropDown(e)}
+					onClick={(e) => e.currentTarget.classList.toggle('active')}
 				>
-					<div
-						onClick={() => setUlActive(!ulActive)}
-						className='aside__element--title'
-					>
+					<div className='aside__element--title'>
 						<ion-icon name='chevron-forward-outline'></ion-icon>
 						<span>{capitalize(iterator)}</span>
 					</div>

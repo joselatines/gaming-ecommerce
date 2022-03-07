@@ -1,9 +1,12 @@
+import { Fragment } from 'react';
 import styled from 'styled-components';
 
 import variables from './assets/variables.json';
 import { Button } from './Button';
 
 export function Product(props) {
+	const { productData } = props;
+
 	const ratings = {
 		sony: 4.7,
 		samsung: 3.4,
@@ -14,35 +17,36 @@ export function Product(props) {
 	const starsTotal = 5;
 
 	return (
-		<Container>
-			<div className='product__imgContainer'>
-				<img
-					src='https://assets.spartangeek.com/cc/ew-thor-1_200106_021015.png'
-					alt='pc gamer'
-				/>
-			</div>
-			<div className='product__content'>
-				<h2 className='product__content--title'>
-					Xtreme PC Gamer AMD Radeon RX
-				</h2>
-				<div className='product__content--price'>
-					<span className='price--main'>$900.00</span>
-					<span className='price--old'>$1500.00</span>
-				</div>
-				<div className='product__content--description'>
-					<p>Eligible for Shipping To Mars or somewhere else</p>
-				</div>
-				<div className='product__content--ratingAndBtn'>
-					<div className='ratingAndBtn__rating'>
-						<div className='stars-outer'>
-							<div className='stars-inner'></div>
+		<Fragment>
+			{
+				productData.map((product) => (
+					<Container key={product.id}>
+						<div className='product__imgContainer'>
+							<img src={product.image} alt='pc gamer' />
 						</div>
-						<span className='number-rating'>5/5</span>
-					</div>
-					<Button content='Read more' />
-				</div>
-			</div>
-		</Container>
+						<div className='product__content'>
+							<h2 className='product__content--title'>{product.title}</h2>
+							<div className='product__content--price'>
+								<span className='price--main'>${product.price}</span>
+								<span className='price--old'>${product.old_price}</span>
+							</div>
+							<div className='product__content--description'>
+								<p>{product.description}</p>
+							</div>
+							<div className='product__content--ratingAndBtn'>
+								<div className='ratingAndBtn__rating'>
+									<div className='stars-outer'>
+										<div className='stars-inner'></div>
+									</div>
+									<span className='number-rating'>{product.rating}/5</span>
+								</div>
+								<Button content='Read more' />
+							</div>
+						</div>
+					</Container>
+				))
+			}
+		</Fragment>
 	);
 }
 
