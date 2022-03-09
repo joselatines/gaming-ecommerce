@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 import { Product } from './Product';
 export function Products(props) {
-	const array2 = props.productsData;
+	const data = props.productsData;
+	const { title } = data;
 	return (
 		<Container>
-			<Product productData={array2} only={25} />
+			<Product title={title} productData={data} only={25} />
 		</Container>
 	);
 }

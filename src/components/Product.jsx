@@ -23,7 +23,7 @@ export function Product(props) {
 		<Fragment>
 			{productData.map((product) =>
 				numberOfProducts < only ? (
-					<StyledLink to={`${product.ide}`} state={product} key={product.id}>
+					<StyledLink to={`${product.id}`} state={product} key={product.id}>
 						<Container
 							starScore={convertToPercentage(product.rating)}
 							key={product.id}
