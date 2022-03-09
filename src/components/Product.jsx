@@ -6,7 +6,7 @@ import variables from './assets/variables.json';
 import { Button } from './Button';
 
 export function Product(props) {
-	const { productData, only } = props;
+	const { title, description } = props;
 
 	let numberOfProducts = 0;
 	const sumNumber = () => {
@@ -21,45 +21,39 @@ export function Product(props) {
 
 	return (
 		<Fragment>
-			{productData.map((product) =>
-				numberOfProducts < only ? (
-					<StyledLink to={`${product.ide}`} state={product} key={product.id}>
-						<Container
-							starScore={convertToPercentage(product.rating)}
-							key={product.id}
-						>
-							<div className='product__imgContainer'>
-								<img src={product.image} alt='pc gamer' />
+			<Container
+				starScore={convertToPercentage(product.rating)}
+				key={product.id}
+			>
+				<div className='product__imgContainer'>
+					<img src={product.image} alt='pc gamer' />
+				</div>
+				<div className='product__content'>
+					<h2 className='product__content--title'>{title}</h2>
+					<div className='product__content--price'>
+						<span className='price--main'>${product.price}</span>
+						{product.old_price ? (
+							<span className='price--old'>${product.old_price}</span>
+						) : null}
+					</div>
+					<div className='product__content--description'>
+						<p>{description}</p>
+					</div>
+					<div className='product__content--ratingAndBtn'>
+						<div className='ratingAndBtn__rating'>
+							<div className='stars-outer'>
+								<div className='stars-inner'></div>
 							</div>
-							<div className='product__content'>
-								<h2 className='product__content--title'>{product.title}</h2>
-								<div className='product__content--price'>
-									<span className='price--main'>${product.price}</span>
-									{product.old_price ? (
-										<span className='price--old'>${product.old_price}</span>
-									) : null}
-								</div>
-								<div className='product__content--description'>
-									<p>{product.description}</p>
-								</div>
-								<div className='product__content--ratingAndBtn'>
-									<div className='ratingAndBtn__rating'>
-										<div className='stars-outer'>
-											<div className='stars-inner'></div>
-										</div>
-									</div>
-									<Button
-										color={variables.colors.primary}
-										icon={<ion-icon name='heart-outline'></ion-icon>}
-										content='Read more'
-									/>
-								</div>
-							</div>
-							{sumNumber()}
-						</Container>
-					</StyledLink>
-				) : null
-			)}
+						</div>
+						<Button
+							color={variables.colors.primary}
+							icon={<ion-icon name='heart-outline'></ion-icon>}
+							content='Read more'
+						/>
+					</div>
+				</div>
+				{sumNumber()}
+			</Container>
 		</Fragment>
 	);
 }

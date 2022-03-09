@@ -2,11 +2,19 @@ import styled from 'styled-components';
 
 import { Product } from './Product';
 export function Products(props) {
-	const array2 = props.productsData;
-	///dfdsfkjsdnhkfjhsdkjfhksdhfjksdfhkjsdf
+	const data = props.productsData;
+
+	{
+		/* <StyledLink to={`${product.id}`} state={product} key={product.id}>
+					
+				</StyledLink> */
+	}
 	return (
 		<Container>
-			<Product productData={array2} only={25} />
+			{data.map((el) => (
+				<Product key={el.id} title={el.id} description={el.description} price={el.price} ol_price={el.ol_price} />
+			))}
+			{/* <Product productData={data} only={25} /> */}
 		</Container>
 	);
 }

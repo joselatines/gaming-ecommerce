@@ -12,7 +12,7 @@ export function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='product' element={<Navigate to='/' />} />
-				<Route path=':idProduct' element={<ProductPage />} />
+				<Route path='product/:idProduct' element={<ProductPage />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 			<Footer />
