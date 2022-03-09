@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { StyledLink } from './ReactRouterStyled';
 
 import { Product } from './Product';
 export function Products(props) {
@@ -12,7 +13,26 @@ export function Products(props) {
 	return (
 		<Container>
 			{data.map((el) => (
-				<Product key={el.id} title={el.id} description={el.description} price={el.price} ol_price={el.ol_price} />
+				<StyledLink
+					to={`product/${el.id}`}
+					state={{
+						state: {
+							element: el,
+							data: data,
+						},
+					}}
+					key={el.id}
+				>
+					<Product
+						title={el.title}
+						description={el.description}
+						price={el.price}
+						old_price={el.old_price}
+						image={el.image}
+						rating={el.rating}
+				
+					/>
+				</StyledLink>
 			))}
 			{/* <Product productData={data} only={25} /> */}
 		</Container>

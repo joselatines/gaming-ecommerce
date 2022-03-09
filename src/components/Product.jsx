@@ -1,12 +1,10 @@
-import { Fragment } from 'react';
 import styled from 'styled-components';
-import { StyledLink } from './ReactRouterStyled';
 
 import variables from './assets/variables.json';
 import { Button } from './Button';
 
 export function Product(props) {
-	const { title, description } = props;
+	const { title, description, image, price, old_price, id, rating } = props;
 
 	let numberOfProducts = 0;
 	const sumNumber = () => {
@@ -20,41 +18,34 @@ export function Product(props) {
 	};
 
 	return (
-		<Fragment>
-			<Container
-				starScore={convertToPercentage(product.rating)}
-				key={product.id}
-			>
-				<div className='product__imgContainer'>
-					<img src={product.image} alt='pc gamer' />
+		<Container starScore={convertToPercentage(rating)} key={id}>
+			<div className='product__imgContainer'>
+				<img src={image} alt='pc gamer' />
+			</div>
+			<div className='product__content'>
+				<h2 className='product__content--title'>{title}</h2>
+				<div className='product__content--price'>
+					<span className='price--main'>${price}</span>
+					{old_price ? <span className='price--old'>${old_price}</span> : null}
 				</div>
-				<div className='product__content'>
-					<h2 className='product__content--title'>{title}</h2>
-					<div className='product__content--price'>
-						<span className='price--main'>${product.price}</span>
-						{product.old_price ? (
-							<span className='price--old'>${product.old_price}</span>
-						) : null}
-					</div>
-					<div className='product__content--description'>
-						<p>{description}</p>
-					</div>
-					<div className='product__content--ratingAndBtn'>
-						<div className='ratingAndBtn__rating'>
-							<div className='stars-outer'>
-								<div className='stars-inner'></div>
-							</div>
+				<div className='product__content--description'>
+					<p>{description}</p>
+				</div>
+				<div className='product__content--ratingAndBtn'>
+					<div className='ratingAndBtn__rating'>
+						<div className='stars-outer'>
+							<div className='stars-inner'></div>
 						</div>
-						<Button
-							color={variables.colors.primary}
-							icon={<ion-icon name='heart-outline'></ion-icon>}
-							content='Read more'
-						/>
 					</div>
+					<Button
+						color={variables.colors.primary}
+						icon={<ion-icon name='heart-outline'></ion-icon>}
+						content='Read more'
+					/>
 				</div>
-				{sumNumber()}
-			</Container>
-		</Fragment>
+			</div>
+			{sumNumber()}
+		</Container>
 	);
 }
 
