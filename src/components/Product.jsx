@@ -1,12 +1,17 @@
 import { Fragment } from 'react';
 import styled from 'styled-components';
+import { StyledLink } from './ReactRouterStyled';
 
 import variables from './assets/variables.json';
 import { Button } from './Button';
 
 export function Product(props) {
-	const { productData } = props;
+	const { productData, only } = props;
 
+	let numberOfProducts = 0;
+	const sumNumber = () => {
+		numberOfProducts++;
+	};
 	const convertToPercentage = (ratingNumber) => {
 		const totalStars = 5;
 		const starPercentage = (ratingNumber / totalStars) * 100;
@@ -16,41 +21,45 @@ export function Product(props) {
 
 	return (
 		<Fragment>
-			{productData.map((product) => (
-				<Container
-					starScore={convertToPercentage(product.rating)}
-					key={product.id}
-				>
-					{console.log(product.rating)}
-					<div className='product__imgContainer'>
-						<img src={product.image} alt='pc gamer' />
-					</div>
-					<div className='product__content'>
-						<h2 className='product__content--title'>{product.title}</h2>
-						<div className='product__content--price'>
-							<span className='price--main'>${product.price}</span>
-							{product.old_price ? (
-								<span className='price--old'>${product.old_price}</span>
-							) : null}
-						</div>
-						<div className='product__content--description'>
-							<p>{product.description}</p>
-						</div>
-						<div className='product__content--ratingAndBtn'>
-							<div className='ratingAndBtn__rating'>
-								<div className='stars-outer'>
-									<div className='stars-inner'></div>
+			{productData.map((product) =>
+				numberOfProducts < only ? (
+					<StyledLink to={`${product.ide}`} state={product} key={product.id}>
+						<Container
+							starScore={convertToPercentage(product.rating)}
+							key={product.id}
+						>
+							<div className='product__imgContainer'>
+								<img src={product.image} alt='pc gamer' />
+							</div>
+							<div className='product__content'>
+								<h2 className='product__content--title'>{product.title}</h2>
+								<div className='product__content--price'>
+									<span className='price--main'>${product.price}</span>
+									{product.old_price ? (
+										<span className='price--old'>${product.old_price}</span>
+									) : null}
+								</div>
+								<div className='product__content--description'>
+									<p>{product.description}</p>
+								</div>
+								<div className='product__content--ratingAndBtn'>
+									<div className='ratingAndBtn__rating'>
+										<div className='stars-outer'>
+											<div className='stars-inner'></div>
+										</div>
+									</div>
+									<Button
+										color={variables.colors.primary}
+										icon={<ion-icon name='heart-outline'></ion-icon>}
+										content='Read more'
+									/>
 								</div>
 							</div>
-							<Button
-								color={variables.colors.primary}
-								icon={<ion-icon name='heart-outline'></ion-icon>}
-								content='Read more'
-							/>
-						</div>
-					</div>
-				</Container>
-			))}
+							{sumNumber()}
+						</Container>
+					</StyledLink>
+				) : null
+			)}
 		</Fragment>
 	);
 }
@@ -63,6 +72,7 @@ const Container = styled.div`
 	padding: 15px;
 	background-color: #fff;
 	color: ${variables.colors.font};
+	cursor: pointer;
 	.product__imgContainer {
 		width: 100%;
 		height: 13rem;
@@ -78,6 +88,7 @@ const Container = styled.div`
 		padding: 1rem 0;
 		.product__content--title {
 			font-size: 1rem;
+			font-weight: 700;
 		}
 		.product__content--price {
 			font-size: 1.2rem;

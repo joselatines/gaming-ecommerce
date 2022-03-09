@@ -5,7 +5,6 @@ import variables from './assets/variables.json';
 
 // To use this components you need to use ionics CDN
 export function Aside(props) {
-
 	const data = props.productsData;
 
 	const createNavElement = () => {
@@ -13,11 +12,14 @@ export function Aside(props) {
 
 		const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
-		const createLi = (objProperty) => {
+		const createLi = (objProperty, objType) => {
 			let id = 0;
 			let keys = Object.keys(objProperty);
 			return keys.map((li) => (
-				<li onClick={(e) => props.changeDataProducts(e.target.innerHTML)} key={id++}>
+				<li
+					onClick={(e) => props.changeDataProducts(e.target.innerHTML, objType)}
+					key={id++}
+				>
 					{capitalize(li)}
 				</li>
 			));
@@ -34,7 +36,10 @@ export function Aside(props) {
 						<ion-icon name='chevron-forward-outline'></ion-icon>
 						<span>{capitalize(iterator)}</span>
 					</div>
-					<ul className='aside__element--ul'>{createLi(data[iterator])}</ul>
+
+					<ul className='aside__element--ul'>
+						{createLi(data[iterator], iterator)}
+					</ul>
 				</div>
 			);
 		}

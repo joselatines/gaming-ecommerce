@@ -4,7 +4,8 @@
 		"secondary": "#3461FF",
 		"bg": "#fff",
 		"bg_dark": "#22252A",
-		"font": "#22252A"
+		"font": "#22252A",
+		"font_gray": "#9A9A9A"
 	},
 	"mediaQueries": {
 		"mobile_l": "425px",

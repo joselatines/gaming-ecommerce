@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import variables from './assets/variables.json';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export function Navigation() {
 	const [navigation, setNavigation] = useState(false);
@@ -11,30 +12,23 @@ export function Navigation() {
 
 	return (
 		<Container>
-			<Logo>DRX Ecommerce</Logo>
+			<Logo>
+				<StyledNavLink to='/'>DRX Ecommerce</StyledNavLink>
+			</Logo>
 			<Hamburger active={navigation} onClick={showNavigation}>
 				<Bar></Bar>
 				<Bar></Bar>
 				<Bar></Bar>
 			</Hamburger>
 			<ContainerUL show={navigation}>
-				<Dropdown>
-					<div>
-						<span>Dropdown</span>
-						<ion-icon name='chevron-down-outline'></ion-icon>
-					</div>
-					<DropdownContent>
-						<li>Item 1</li>
-						<li>Item 2</li>
-					</DropdownContent>
-				</Dropdown>
-				<LI className='searchContainer'>
+				{/* <LI className='searchContainer'>
 					<input type='text' name='' id='' placeholder='Search something' />
 					<ion-icon name='search-outline'></ion-icon>
-				</LI>
+				</LI> 
 				<LI>
 					<ion-icon name='person-circle-outline'></ion-icon>
 				</LI>
+				*/}
 				<LI>
 					<ion-icon name='cart-outline'></ion-icon>
 				</LI>
@@ -42,6 +36,11 @@ export function Navigation() {
 		</Container>
 	);
 }
+
+const StyledNavLink = styled(NavLink)`
+	color: #fff;
+	text-decoration: none;
+`;
 
 const Container = styled.div`
 	color: #fff;

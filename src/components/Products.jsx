@@ -5,9 +5,7 @@ export function Products(props) {
 	const array2 = props.productsData;
 	return (
 		<Container>
-			{array2.map((el) => (
-				<Product productData={array2} key={el.id} />
-			))}
+			<Product productData={array2} only={25} />
 		</Container>
 	);
 }
