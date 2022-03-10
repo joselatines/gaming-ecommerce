@@ -4,12 +4,6 @@ import { StyledLink } from './ReactRouterStyled';
 import { Product } from './Product';
 export function Products(props) {
 	const data = props.productsData;
-<<<<<<< HEAD
-	const { title } = data;
-	return (
-		<Container>
-			<Product title={title} productData={data} only={25} />
-=======
 
 	return (
 		<Container>
@@ -35,7 +29,6 @@ export function Products(props) {
 					/>
 				</StyledLink>
 			))}
->>>>>>> rama2
 		</Container>
 	);
 }

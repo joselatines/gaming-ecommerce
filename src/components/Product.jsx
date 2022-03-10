@@ -19,49 +19,6 @@ export function Product(props) {
 	};
 
 	return (
-<<<<<<< HEAD
-		<Fragment>
-			{productData.map((product) =>
-				numberOfProducts < only ? (
-					<StyledLink to={`${product.id}`} state={product} key={product.id}>
-						<Container
-							starScore={convertToPercentage(product.rating)}
-							key={product.id}
-						>
-							<div className='product__imgContainer'>
-								<img src={product.image} alt='pc gamer' />
-							</div>
-							<div className='product__content'>
-								<h2 className='product__content--title'>{product.title}</h2>
-								<div className='product__content--price'>
-									<span className='price--main'>${product.price}</span>
-									{product.old_price ? (
-										<span className='price--old'>${product.old_price}</span>
-									) : null}
-								</div>
-								<div className='product__content--description'>
-									<p>{product.description}</p>
-								</div>
-								<div className='product__content--ratingAndBtn'>
-									<div className='ratingAndBtn__rating'>
-										<div className='stars-outer'>
-											<div className='stars-inner'></div>
-										</div>
-									</div>
-									<Button
-										color={variables.colors.primary}
-										icon={<ion-icon name='heart-outline'></ion-icon>}
-										content='Read more'
-									/>
-								</div>
-							</div>
-							{sumNumber()}
-						</Container>
-					</StyledLink>
-				) : null
-			)}
-		</Fragment>
-=======
 		<Container starScore={convertToPercentage(rating)} key={id}>
 			<div className='product__imgContainer'>
 				<img src={image} alt='pc gamer' />
@@ -94,7 +51,6 @@ export function Product(props) {
 			</div>
 			{sumNumber()}
 		</Container>
->>>>>>> rama2
 	);
 }
 
