@@ -1,12 +1,11 @@
-import { Fragment } from 'react';
 import styled from 'styled-components';
-import { StyledLink } from './ReactRouterStyled';
 
 import variables from './assets/variables.json';
 import { Button } from './Button';
+import { addItemToCart } from '../pages/CartPage';
 
 export function Product(props) {
-	const { productData, only } = props;
+	const { title, description, image, price, old_price, id, rating } = props;
 
 	let numberOfProducts = 0;
 	const sumNumber = () => {
@@ -20,6 +19,7 @@ export function Product(props) {
 	};
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
 			{productData.map((product) =>
 				numberOfProducts < only ? (
@@ -61,8 +61,44 @@ export function Product(props) {
 				) : null
 			)}
 		</Fragment>
+=======
+		<Container starScore={convertToPercentage(rating)} key={id}>
+			<div className='product__imgContainer'>
+				<img src={image} alt='pc gamer' />
+			</div>
+			<div className='product__content'>
+				<h2 className='product__content--title'>{title}</h2>
+				<div className='product__content--price'>
+					<span className='price--main'>${price}</span>
+					{old_price ? <span className='price--old'>${old_price}</span> : null}
+				</div>
+				<div className='product__content--description'>
+					<p>{description}</p>
+				</div>
+				<div className='product__content--ratingAndBtn'>
+					<div className='ratingAndBtn__rating'>
+						<div className='stars-outer'>
+							<div className='stars-inner'></div>
+						</div>
+					</div>
+					<Button
+					className="btn"
+						onClick={() =>
+							addItemToCart({ title: 'I am a title', price: 2000 })
+						}
+						color={variables.colors.primary}
+						icon={<ion-icon name='heart-outline'></ion-icon>}
+						content='Read more'
+					/>
+				</div>
+			</div>
+			{sumNumber()}
+		</Container>
+>>>>>>> rama2
 	);
 }
+
+
 
 const Container = styled.div`
 	width: 15rem;
@@ -73,6 +109,9 @@ const Container = styled.div`
 	background-color: #fff;
 	color: ${variables.colors.font};
 	cursor: pointer;
+	.btn {
+		background: red;
+	}
 	.product__imgContainer {
 		width: 100%;
 		height: 13rem;

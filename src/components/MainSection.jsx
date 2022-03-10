@@ -7,22 +7,23 @@ export function MainSection(props) {
 	const [data, setData] = useState(props.productsData.computers.gamers);
 
 	const changeData = (productType, type) => {
-		const minimized = productType.charAt(0).toLowerCase() + productType.slice(1);
+		const minimized =
+			productType.charAt(0).toLowerCase() + productType.slice(1);
 
 		setData(props.productsData[type][minimized]);
 	};
 	return (
-		<Container>
+		<ContainerProductsMain>
 			<Aside
 				productsData={props.productsData}
 				changeDataProducts={changeData}
 			/>
 			<Products productsData={data} />
-		</Container>
+		</ContainerProductsMain>
 	);
 }
 
-const Container = styled.main`
+export const ContainerProductsMain = styled.main`
 	display: grid;
 	gap: 0px 13px;
 	grid-template-columns: auto 1fr;

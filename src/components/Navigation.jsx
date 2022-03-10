@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import variables from './assets/variables.json';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { StyledLink } from './ReactRouterStyled';
 
 export function Navigation() {
 	const [navigation, setNavigation] = useState(false);
@@ -30,7 +31,9 @@ export function Navigation() {
 				</LI>
 				*/}
 				<LI>
-					<ion-icon name='cart-outline'></ion-icon>
+					<StyledLink to='my-cart/'>
+						<ion-icon name='cart-outline'></ion-icon>
+					</StyledLink>
 				</LI>
 			</ContainerUL>
 		</Container>

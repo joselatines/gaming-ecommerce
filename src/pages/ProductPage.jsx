@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import products from '../components/assets/products.json';
 import variables from '../components/assets/variables.json';
 import { StyledLink } from '../components/ReactRouterStyled';
 import { Button } from '../components/Button';
@@ -11,9 +10,17 @@ import { GoHome } from '../components/GoHome';
 
 export function ProductPage() {
 	const { state } = useLocation();
-	const { title, description, image, components, secondary_images } = state;
+	const data = state.state.data;
+	const product = state.state.element;
+	const { title, description, image, components, secondary_images } = product;
 
-	let id = 0;
+	let productsNumber = 0;
+	let numberOfProducts = 3;
+	let imgsNumber = 0;
+
+	const sum = () => {
+		productsNumber++;
+	};
 	return (
 		<Fragment>
 			{state ? (
@@ -59,7 +66,7 @@ export function ProductPage() {
 						<ImgsContainer>
 							{secondary_images
 								? secondary_images.map((el) => (
-										<div key={id++} className='container'>
+										<div key={imgsNumber++} className='container'>
 											<img src={el} />
 										</div>
 								  ))
@@ -69,7 +76,30 @@ export function ProductPage() {
 					<ProductsContainer>
 						<h2>You might be interesting in...</h2>
 						<div className='container'>
-							<Product productData={products.computers.gamers} only={3} />
+							{data.map((el) =>
+								productsNumber < numberOfProducts ? (
+									<StyledLink
+										to={`/product/${el.id}`}
+										state={{
+											state: {
+												element: el,
+												data: data,
+											},
+										}}
+										key={el.id}
+									>
+										<Product
+											title={el.title}
+											description={el.description}
+											price={el.price}
+											old_price={el.old_price}
+											image={el.image}
+											rating={el.rating}
+										/>
+										{sum()}
+									</StyledLink>
+								) : null
+							)}
 						</div>
 						<GoHome />
 					</ProductsContainer>
