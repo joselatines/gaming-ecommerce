@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import variables from './assets/variables.json';
 import { Button } from './Button';
+import { addItemToCart } from '../pages/CartPage';
 
 export function Product(props) {
 	const { title, description, image, price, old_price, id, rating } = props;
@@ -38,6 +39,10 @@ export function Product(props) {
 						</div>
 					</div>
 					<Button
+					className="btn"
+						onClick={() =>
+							addItemToCart({ title: 'I am a title', price: 2000 })
+						}
 						color={variables.colors.primary}
 						icon={<ion-icon name='heart-outline'></ion-icon>}
 						content='Read more'
@@ -49,6 +54,8 @@ export function Product(props) {
 	);
 }
 
+
+
 const Container = styled.div`
 	width: 15rem;
 	height: auto;
@@ -58,6 +65,9 @@ const Container = styled.div`
 	background-color: #fff;
 	color: ${variables.colors.font};
 	cursor: pointer;
+	.btn {
+		background: red;
+	}
 	.product__imgContainer {
 		width: 100%;
 		height: 13rem;

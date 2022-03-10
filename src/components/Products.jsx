@@ -5,11 +5,6 @@ import { Product } from './Product';
 export function Products(props) {
 	const data = props.productsData;
 
-	{
-		/* <StyledLink to={`${product.id}`} state={product} key={product.id}>
-					
-				</StyledLink> */
-	}
 	return (
 		<Container>
 			{data.map((el) => (
@@ -30,11 +25,10 @@ export function Products(props) {
 						old_price={el.old_price}
 						image={el.image}
 						rating={el.rating}
-				
+						addItemToCart={props.addItemToCart}
 					/>
 				</StyledLink>
 			))}
-			{/* <Product productData={data} only={25} /> */}
 		</Container>
 	);
 }

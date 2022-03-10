@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import products from '../components/assets/products.json';
 import variables from '../components/assets/variables.json';
 import { StyledLink } from '../components/ReactRouterStyled';
 import { Button } from '../components/Button';
