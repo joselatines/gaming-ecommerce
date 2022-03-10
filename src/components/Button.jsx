@@ -3,7 +3,11 @@ import styled, { css } from 'styled-components';
 // To use this component please pass a "content" and "color" props
 export function Button(props) {
 	return (
-		<Container border={props.border} color={props.color}>
+		<Container
+			onClick={() => console.log(1)}
+			border={props.border}
+			color={props.color}
+		>
 			{props.icon} {props.content}
 		</Container>
 	);

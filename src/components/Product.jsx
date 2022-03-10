@@ -23,15 +23,19 @@ export function Product(props) {
 		<Fragment>
 			{productData.map((product) =>
 				numberOfProducts < only ? (
-					<StyledLink to={`${product.ide}`} state={product} key={product.id}>
-						<Container
-							starScore={convertToPercentage(product.rating)}
-							key={product.id}
-						>
-							<div className='product__imgContainer'>
-								<img src={product.image} alt='pc gamer' />
-							</div>
-							<div className='product__content'>
+					<Container
+						starScore={convertToPercentage(product.rating)}
+						key={product.id}
+					>
+						<div className='product__imgContainer'>
+							<img src={product.image} alt='pc gamer' />
+						</div>
+						<div className='product__content'>
+							<StyledLink
+								to={`${product.ide}`}
+								state={product}
+								key={product.id}
+							>
 								<h2 className='product__content--title'>{product.title}</h2>
 								<div className='product__content--price'>
 									<span className='price--main'>${product.price}</span>
@@ -42,22 +46,23 @@ export function Product(props) {
 								<div className='product__content--description'>
 									<p>{product.description}</p>
 								</div>
-								<div className='product__content--ratingAndBtn'>
-									<div className='ratingAndBtn__rating'>
-										<div className='stars-outer'>
-											<div className='stars-inner'></div>
-										</div>
+							</StyledLink>
+							<div className='product__content--ratingAndBtn'>
+								<div className='ratingAndBtn__rating'>
+									<div className='stars-outer'>
+										<div className='stars-inner'></div>
 									</div>
-									<Button
-										color={variables.colors.primary}
-										icon={<ion-icon name='heart-outline'></ion-icon>}
-										content='Read more'
-									/>
 								</div>
+								<Button
+									
+									color={variables.colors.primary}
+									icon={<ion-icon name='heart-outline'></ion-icon>}
+									content='Read more'
+								/>
 							</div>
-							{sumNumber()}
-						</Container>
-					</StyledLink>
+						</div>
+						{sumNumber()}
+					</Container>
 				) : null
 			)}
 		</Fragment>
