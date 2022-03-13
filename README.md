@@ -2,11 +2,11 @@
 
 ## Description
 
-This project was my first website I made in react js. I used concepts like hooks, styled components, ternary operators, spread operators, array methods, React Router, component elements, host images on the web, etc.
+This project was my first website I made in react js. I used concepts like hooks, styled components, ternary operators, spread operators, array methods, React Router, component elements, web host images, etc.
 
-The products data of this website was made by me in a single json file to simulate a data base (thats why is duplicate some titles, descriptions, images but the ids of a single product is uniq).
+The product data for this website was done by me in a single json file to simulate a database (that's why some titles, descriptions, images are duplicated but single product ids are uniq).
 
-I am currently learning python to upgrade this website and built it its own backend properly.
+I am currently learning python to update this website and build its own backend properly.
 
 ## External libraries used
 
