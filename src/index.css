@@ -22,3 +22,11 @@ code {
 	position: relative;
 }
 
+a {
+	all: unset;
+	font-weight: bold;
+	color: #3461FF;
+	cursor: pointer;
+}
+
+a:hover {opacity: .7;}

@@ -1,19 +1,31 @@
 import styled, { css } from 'styled-components';
 import variables from './assets/variables.json';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { StyledLink } from './ReactRouterStyled';
 
 export function Navigation() {
 	const [navigation, setNavigation] = useState(false);
+	const [scroll, setScroll] = useState(false);
 
 	const showNavigation = () => {
 		setNavigation(!navigation);
 	};
 
+	window.onscroll = () => {
+		if (
+			document.body.scrollTop > 20 ||
+			document.documentElement.scrollTop > 20
+		) {
+			setScroll(true);
+		} else {
+			setScroll(false);
+		}
+	};
+
 	return (
-		<Container>
+		<Container show={scroll}>
 			<Logo>
-				<StyledNavLink to='/'>DRX Ecommerce</StyledNavLink>
+				<StyledLink to='/'>DRX Ecommerce</StyledLink>
 			</Logo>
 			<Hamburger active={navigation} onClick={showNavigation}>
 				<Bar></Bar>
@@ -21,28 +33,26 @@ export function Navigation() {
 				<Bar></Bar>
 			</Hamburger>
 			<ContainerUL show={navigation}>
-				{/* <LI className='searchContainer'>
-					<input type='text' name='' id='' placeholder='Search something' />
-					<ion-icon name='search-outline'></ion-icon>
-				</LI> 
 				<LI>
-					<ion-icon name='person-circle-outline'></ion-icon>
-				</LI>
-				*/}
-				<LI>
-					<ion-icon name='cart-outline'></ion-icon>
+					<StyledLink to='my-cart'>
+						<ion-icon name='cart-outline'></ion-icon>
+					</StyledLink>
 				</LI>
 			</ContainerUL>
 		</Container>
 	);
 }
 
-const StyledNavLink = styled(NavLink)`
-	color: #fff;
-	text-decoration: none;
-`;
-
 const Container = styled.div`
+	${(props) =>
+		props.show &&
+		css`
+			background: rgba(255, 255, 255, 0.2);
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(15px);
+			-webkit-backdrop-filter: blur(15px);
+		`}
+		transition: ${variables.transitions.short};
 	color: #fff;
 	padding: 15px 50px;
 	display: flex;
@@ -80,7 +90,7 @@ const Hamburger = styled.div`
 			}
 		`}
 
-	@media (max-width: ${variables.mediaQueries.tablet}) {
+	@media screen and (max-width: ${variables.mediaQueries.tablet}) {
 		display: block;
 	}
 `;
@@ -130,6 +140,7 @@ const ContainerUL = styled.ul`
 const LI = styled.li`
 	font-size: 25px;
 	cursor: pointer;
+	position: relative;
 	&.searchContainer {
 		position: relative;
 		overflow: hidden;
@@ -160,41 +171,6 @@ const LI = styled.li`
 			font-size: 20px;
 			border-radius: 25px;
 			z-index: -1;
-		}
-	}
-`;
-
-const Dropdown = styled(ContainerUL)`
-	display: inline-block;
-	top: unset;
-	position: relative;
-	text-align: center;
-	cursor: pointer;
-	transition: all ${variables.transitions.short};
-	&:hover {
-		// Dropdown content
-		section {
-			display: block;
-			opacity: 1;
-			background-color: none;
-		}
-	}
-`;
-const DropdownContent = styled.section`
-	transition: all ${variables.transitions.short};
-	background-color: ${variables.colors.bg_dark};
-	opacity: 0;
-	color: #fff;
-	position: absolute;
-	top: 22px;
-	width: 100%;
-	padding: 5px 10px;
-	li {
-		transition: ${variables.transitions.short};
-		position: relative;
-		left: 0px;
-		&:hover {
-			left: 5px;
 		}
 	}
 `;

@@ -1,15 +1,34 @@
 import styled from 'styled-components';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+
 import variables from './assets/variables.json';
 
 export function Header() {
+	const titleL = useRef();
+	const titleR = useRef();
+	const description = useRef();
+
+	useEffect(() => {
+		gsap.from(titleL.current, { x: '-200%', duration: 1, ease: 'power2.out' });
+		gsap.from(titleR.current, { x: '200%', duration: 1, ease: 'power2.out' });
+		gsap.from(description.current, {
+			y: '300%',
+			opacity: 0,
+			duration: 1,
+			ease: 'power2.out',
+			delay: 1,
+		});
+	}, []);
+
 	return (
 		<HeaderContainer>
 			<GlassContainer>
 				<div>
-					<TitleL>DRX</TitleL>
-					<TitleR>Setup</TitleR>
+					<TitleL ref={titleL}>DRX</TitleL>
+					<TitleR ref={titleR}>Setup</TitleR>
 				</div>
-				<ContentBelow>
+				<ContentBelow ref={description}>
 					<p>The best shop to build your perfect gamer cave</p>
 				</ContentBelow>
 			</GlassContainer>
@@ -17,8 +36,7 @@ export function Header() {
 	);
 }
 
-const bgIMG =
-	'https://wallpapercave.com/wp/wp8937965.jpg';
+const bgIMG = 'https://wallpapercave.com/wp/wp8937965.jpg';
 
 const HeaderContainer = styled.header`
 	background: url(${bgIMG}) center no-repeat fixed;

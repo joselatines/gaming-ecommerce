@@ -8,7 +8,7 @@ export function Footer() {
 			<section>
 				<ul>
 					<li>
-						<img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodownload.org%2Fwp-content%2Fuploads%2F2014%2F04%2Fintel-logo-2-1.png&f=1&nofb=1' />
+						<h1>DRX Setup</h1>
 					</li>
 					<li>The best place for gamers</li>
 					<li>drxsetup@contact.com</li>
@@ -25,7 +25,10 @@ export function Footer() {
 				</ul>
 				<ul>
 					<Title>Suscribe</Title>
-					<li>sing up</li>
+					<li className='singUp'>
+						<input type='text' placeholder='example@gmail.com' />
+						<input type='button' value='Sing Up' />
+					</li>
 				</ul>
 			</section>
 			<Bottom>
@@ -40,11 +43,19 @@ export function Footer() {
 						<ion-icon name='logo-instagram'></ion-icon>
 					</div>
 				</IconsContainer>
-				<span>
-					A website made by{' '}
-					<a href='https://linktr.ee/doctordraxter' target='_blank' rel='noopener noreferrer'>
+				<span className='waterMark'>
+					A website made by
+					<a
+						href='https://linktr.ee/doctordraxter'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						DoctorDraxter
-					</a>{' '}
+					</a>
+					<img
+						src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png'
+						alt='react-js'
+					/>
 				</span>
 			</Bottom>
 		</Container>
@@ -58,6 +69,17 @@ const Container = styled.footer`
 	grid-template-rows: auto auto;
 	gap: 1rem;
 	padding: 5rem;
+	.waterMark {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		a {
+			margin: 0 5px;
+		}
+		img {
+			width: 20px;
+		}
+	}
 	section {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -67,12 +89,44 @@ const Container = styled.footer`
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;
-			li {
-				img {
-					width: 100%;
-					object-fit: contain;
+			.singUp {
+				@media screen and (max-width: ${variables.mediaQueries.tablet}) {
+					input[type='text'] {
+						width: 60%;
+					}
+				}
+				input {
+					border-radius: unset;
+					outline: unset;
+					padding: 5px;
+					border: 0;
+					&:active {
+						outline: 1px solid ${variables.colors.primary};
+					}
+					&:focus {
+						outline: 1px solid ${variables.colors.primary};
+					}
+				}
+				input[type='button'] {
+					color: #fff;
+					height: 100%;
+					background-color: ${variables.colors.primary};
+					margin: 0 5px;
+					cursor: pointer;
+					outline: unset;
+					&:active {
+						opacity: 0.8;
+					}
 				}
 			}
+			li {
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		}
+		@media screen and (max-width: ${variables.mediaQueries.tablet}) {
+			grid-template-columns: 1fr;
 		}
 	}
 `;
@@ -99,7 +153,10 @@ const Bottom = styled.div`
 	padding: 2rem 0;
 	margin-top: 1rem;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
+
+	gap: 1rem;
 	justify-content: space-between;
 `;
 const IconsContainer = styled.div`
@@ -111,5 +168,10 @@ const IconsContainer = styled.div`
 		border-radius: 50%;
 		display: grid;
 		font-size: 20px;
+		cursor: pointer;
+		&:hover {
+			border: solid 1px ${variables.colors.primary};
+			color: ${variables.colors.primary};
+		}
 	}
 `;

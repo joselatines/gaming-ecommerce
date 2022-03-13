@@ -2,6 +2,7 @@
 	"colors": {
 		"primary": "#735DFF",
 		"secondary": "#3461FF",
+		"red": "#FF2020",
 		"bg": "#fff",
 		"bg_dark": "#22252A",
 		"font": "#22252A",

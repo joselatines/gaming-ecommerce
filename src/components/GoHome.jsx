@@ -21,6 +21,7 @@ const Container = styled.div`
 	position: relative;
 	left: 0;
 	width: fit-content;
+	margin: 15px 0;
 	cursor: pointer;
 	&:hover {
 		left: -10px;
