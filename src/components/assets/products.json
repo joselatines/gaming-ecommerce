@@ -34,7 +34,7 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "gamers",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "AMD Ryzen 5 5600X Processor, 16GB DDR4-3200 XPG RGB RAM, GeForce RTX 3060 Ti - 8GB, 1TB Intel M.2 NVMe SSD",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://assets.spartangeek.com/cc/ew-thor-1_200106_021015.png",
 				"secondary_images": [
@@ -60,7 +60,7 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "gamers",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "AMD Ryzen 9 5900X CPU, 32GB DDR4-3200MHz RGB RAM, GeForce RTX 3080 Ti - 12GB, 1TB M.2 NVMe SSD + 2TB HDD",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://assets.spartangeek.com/cc/ew-thor-1_200106_021015.png",
 				"secondary_images": [
@@ -86,7 +86,7 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "gamers",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "Intel® Core™ i5-12400F CPU, 16GB DDR4-3200 XPG RGB RAM, NVIDIA GeForce RTX 3050 - 8GB, 500GB WD M.2 NVMe SSD",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://assets.spartangeek.com/cc/ew-thor-1_200106_021015.png",
 				"secondary_images": [
@@ -140,7 +140,7 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "kids",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "Intel® Core™ i5-12400F CPU, 16GB DDR4-3200 XPG RGB RAM, NVIDIA GeForce RTX 3050 - 8GB, 500GB WD M.2 NVMe SSD",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/wLRmmrm/71lcme7-Jo-PL-AC-SX522-removebg-preview.png",
 				"secondary_images": [
@@ -166,7 +166,7 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "kids",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "AMD Ryzen 7 5800X Processor, 16GB DDR4-3200 XPG RGB RAM, GeForce RTX 3060 Ti - 8GB, 1TB Intel M.2 NVMe SSD",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/wLRmmrm/71lcme7-Jo-PL-AC-SX522-removebg-preview.png",
 				"secondary_images": [
@@ -192,7 +192,7 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "kids",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "Gaming RDY SLMRR201",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/wLRmmrm/71lcme7-Jo-PL-AC-SX522-removebg-preview.png",
 				"secondary_images": [
@@ -220,7 +220,85 @@
 				"old_price": 2000.99,
 				"type": "computers",
 				"type_item": "kids",
-				"title": "Xtreme PC Gamer AMD Radeon RX",
+				"title": "Game From Home Sale Intel Z690 i5 2022",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+				"secondary_images": [
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png"
+				],
+				"components": {
+					"case": "Rosewill ATX Mid Tower Gaming",
+					"ram": "TEAMGROUP T-Force Dark Za (Alpha) 16GB Kit (2x8GB) DDR4 Dram 3600MHz (PC4-28800)",
+					"processor": "Processor Intel",
+					"motherboard": "ASUS TUF GAMING B550M-ZAKU AM4 AMD B550 SATA 6Gb/s",
+					"graphic": "GIGABYTE GeForce RTX 3050 GAMING OC 8G",
+					"power_supply": "GAMEMAX Power Supply 850W Fully Modular 80+ Gold Certified with Addressable RGB Light Mode",
+					"hard_drives": "WD Black 4TB Performance Desktop",
+					"cooling": "LIAN LI GALAHAD AIO 360 RGB UNI FAN SL120 EDITION WHITE , Dual 120mm Addressable RGB "
+				}
+			},
+			{
+				"id": 566651,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "computers",
+				"type_item": "kids",
+				"title": "Game From Home Sale Intel 12th Gen Streamer",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+				"secondary_images": [
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png"
+				],
+				"components": {
+					"case": "Rosewill ATX Mid Tower Gaming",
+					"ram": "TEAMGROUP T-Force Dark Za (Alpha) 16GB Kit (2x8GB) DDR4 Dram 3600MHz (PC4-28800)",
+					"processor": "Processor Intel",
+					"motherboard": "ASUS TUF GAMING B550M-ZAKU AM4 AMD B550 SATA 6Gb/s",
+					"graphic": "GIGABYTE GeForce RTX 3050 GAMING OC 8G",
+					"power_supply": "GAMEMAX Power Supply 850W Fully Modular 80+ Gold Certified with Addressable RGB Light Mode",
+					"hard_drives": "WD Black 4TB Performance Desktop",
+					"cooling": "LIAN LI GALAHAD AIO 360 RGB UNI FAN SL120 EDITION WHITE , Dual 120mm Addressable RGB "
+				}
+			},
+			{
+				"id": 2115,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "computers",
+				"type_item": "kids",
+				"title": "Gaming RDY SLMBG215",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+				"secondary_images": [
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
+					"https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png"
+				],
+				"components": {
+					"case": "Rosewill ATX Mid Tower Gaming",
+					"ram": "TEAMGROUP T-Force Dark Za (Alpha) 16GB Kit (2x8GB) DDR4 Dram 3600MHz (PC4-28800)",
+					"processor": "Processor Intel",
+					"motherboard": "ASUS TUF GAMING B550M-ZAKU AM4 AMD B550 SATA 6Gb/s",
+					"graphic": "GIGABYTE GeForce RTX 3050 GAMING OC 8G",
+					"power_supply": "GAMEMAX Power Supply 850W Fully Modular 80+ Gold Certified with Addressable RGB Light Mode",
+					"hard_drives": "WD Black 4TB Performance Desktop",
+					"cooling": "LIAN LI GALAHAD AIO 360 RGB UNI FAN SL120 EDITION WHITE , Dual 120mm Addressable RGB "
+				}
+			},
+			{
+				"id": 2215,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "computers",
+				"type_item": "kids",
+				"title": "Game From Home Sale AMD Ryzen 5 2022",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/9ss0qSt/New-Design-ATX-Home-Business-Office-Desktop-Computer-Case-with-RGB-Light-removebg-preview.png",
 				"secondary_images": [
@@ -244,13 +322,77 @@
 	"components": {
 		"processors": [
 			{
-				"id": 101,
+				"id": 1011,
 				"rating": 4.7,
 				"price": 1799.99,
 				"old_price": 2000.99,
 				"type": "components",
 				"type_item": "processors",
 				"title": "Intel Core  Alder Lake-S",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+				"secondary_images": [
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png"
+				]
+			},
+			{
+				"id": 1013,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "components",
+				"type_item": "processors",
+				"title": "AMD Ryzen Threadripper",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+				"secondary_images": [
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png"
+				]
+			},
+			{
+				"id": 1012,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "components",
+				"type_item": "processors",
+				"title": "Intel Core i9",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+				"secondary_images": [
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png"
+				]
+			},
+			{
+				"id": 1014,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "components",
+				"type_item": "processors",
+				"title": "Intel Core i7",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+				"secondary_images": [
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
+					"https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png"
+				]
+			},
+			{
+				"id": 1054114,
+				"rating": 4.7,
+				"price": 1799.99,
+				"old_price": 2000.99,
+				"type": "components",
+				"type_item": "processors",
+				"title": "Intel Core i5",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/3hPRjGP/01-ccexpress-300x300.png",
 				"secondary_images": [
@@ -273,6 +415,42 @@
 				"title": "TEAMGROUP T-Force Dark Za (Alpha) 16GB Kit (2x8GB) DDR4 Dram 3600MHz (PC4-28800) CL18 Desktop Memory Module Ram for AMD Ryzen - TDZAD416G3600HC18JDC01",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/RzgkpCr/memoria-ram-corsair-rgb-pro-3200mhz-1-1200x1200-removebg-preview.png"
+			},
+			{
+				"id": 2023,
+				"rating": 4.7,
+				"price": 70.99,
+				"old_price": 78.99,
+				"brand": "TEAMGROUP",
+				"type": "components",
+				"type_item": "rams",
+				"title": "CORSAIR Vengeance RGB Pro 16GB (2 x 8GB) 288-Pin DDR4 DRAM DDR4 3200 (PC4 25600) Desktop Memory",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/RzgkpCr/memoria-ram-corsair-rgb-pro-3200mhz-1-1200x1200-removebg-preview.png"
+			},
+			{
+				"id": 2024,
+				"rating": 4.7,
+				"price": 70.99,
+				"old_price": 78.99,
+				"brand": "TEAMGROUP",
+				"type": "components",
+				"type_item": "rams",
+				"title": "OLOy Blade RGB 16GB (2 x 8GB) 288-Pin DDR5 SDRAM DDR5 5600 (PC5 44800) Intel XMP 3.0 Desktop",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/RzgkpCr/memoria-ram-corsair-rgb-pro-3200mhz-1-1200x1200-removebg-preview.png"
+			},
+			{
+				"id": 2025,
+				"rating": 4.7,
+				"price": 70.99,
+				"old_price": 78.99,
+				"brand": "TEAMGROUP",
+				"type": "components",
+				"type_item": "rams",
+				"title": "CORSAIR Vengeance RGB RT 64GB (2 x 32GB) 288-Pin DDR4 SDRAM DDR4 3200 (PC4 25600) AMD Optimized",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/RzgkpCr/memoria-ram-corsair-rgb-pro-3200mhz-1-1200x1200-removebg-preview.png"
 			}
 		],
 
@@ -288,6 +466,30 @@
 				"title": "Rosewill ATX Mid Tower Gaming PC Computer Case with RGB Fan & LED Light Strip, 240mm AIO up to 360mm Support, Bottom Mount PSU & HDD/SSD, Tempered Glass & Black Steel - ZIRCON M",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/2qCSgQW/H84d8d5fd482840afa26703ef114bcbef-K-removebg-preview.png"
+			},
+			{
+				"id": 3031,
+				"rating": 4.3,
+				"price": 210.45,
+				"old_price": 300.0,
+				"brand": "Rosewill",
+				"type": "components",
+				"type_item": "cases",
+				"title": "CORSAIR iCUE 5000X RGB Tempered Glass Mid-Tower ATX PC Smart Case, White, CC-9011213-WW",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/2qCSgQW/H84d8d5fd482840afa26703ef114bcbef-K-removebg-preview.png"
+			},
+			{
+				"id": 3032,
+				"rating": 4.3,
+				"price": 210.45,
+				"old_price": 300.0,
+				"brand": "Rosewill",
+				"type": "components",
+				"type_item": "cases",
+				"title": "NZXT H710 - ATX Mid Tower PC Gaming Case - Front I/O USB Type-C Port - Quick-Release Tempered Glass Side Panel - Cable Management System",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/2qCSgQW/H84d8d5fd482840afa26703ef114bcbef-K-removebg-preview.png"
 			}
 		],
 		"graphics": [
@@ -299,7 +501,43 @@
 				"brand": "GIGABYTE",
 				"type": "components",
 				"type_item": "graphics",
-				"title": "GIGABYTE GeForce RTX 3050 GAMING OC 8G Graphics Card, 3x WINDFORCE Fans, 8GB GDDR6 128-bit GDDR6, GV-N3050GAMING OC-8GD Video Card",
+				"title": "ASUS Phoenix GeForce RTX 3050 Video Card PH-RTX3050-8G",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/92Qj9Dg/aorus-removebg-preview.png"
+			},
+			{
+				"id": 4065,
+				"rating": 4.3,
+				"price": 510.99,
+				"old_price": 600.0,
+				"brand": "GIGABYTE",
+				"type": "components",
+				"type_item": "graphics",
+				"title": "ASUS Phoenix GeForce RTX 3050 Video Card PH-RTX3050-8G",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/92Qj9Dg/aorus-removebg-preview.png"
+			},
+			{
+				"id": 4056,
+				"rating": 4.3,
+				"price": 510.99,
+				"old_price": 600.0,
+				"brand": "GIGABYTE",
+				"type": "components",
+				"type_item": "graphics",
+				"title": "ASUS Dual GeForce RTX 3050 Video Card DUAL-RTX3050-O8G",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/92Qj9Dg/aorus-removebg-preview.png"
+			},
+			{
+				"id": 4057,
+				"rating": 4.3,
+				"price": 510.99,
+				"old_price": 600.0,
+				"brand": "GIGABYTE",
+				"type": "components",
+				"type_item": "graphics",
+				"title": "ASUS Dual Radeon RX 6500 XT Video Card DUAL-RX6500XT-O4G",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/92Qj9Dg/aorus-removebg-preview.png"
 			}
@@ -316,6 +554,42 @@
 				"title": "ASUS TUF GAMING B550M-ZAKU (WI-FI) AM4 AMD B550 SATA 6Gb/s Micro ATX AMD Motherboard",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/7Q9KS10/kisspng-intel-x99-rgb-hi-fi-gaming-motherboard-x99a-gami-the-msi-x99a-gaming-pro-carbon-motherboard.png"
+			},
+			{
+				"id": 5065,
+				"rating": 4.3,
+				"price": 250.99,
+				"old_price": 300.0,
+				"brand": "ASUS",
+				"type": "components",
+				"type_item": "motherboards",
+				"title": "CORSAIR Vengeance RGB RT 64GB (2 x 32GB) 288-Pin DDR4 SDRAM DDR4 3200 (PC4 25600) AMD Optimized",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/7Q9KS10/kisspng-intel-x99-rgb-hi-fi-gaming-motherboard-x99a-gami-the-msi-x99a-gaming-pro-carbon-motherboard.png"
+			},
+			{
+				"id": 5051,
+				"rating": 4.3,
+				"price": 250.99,
+				"old_price": 300.0,
+				"brand": "ASUS",
+				"type": "components",
+				"type_item": "motherboards",
+				"title": "ASUS Prime Z690-A LGA 1700 Intel 12th ATX Motherboard- 16+1 DrMOS, PCIe 5.0, DDR5, 4x M.2, Intel 2.5 Gb",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/7Q9KS10/kisspng-intel-x99-rgb-hi-fi-gaming-motherboard-x99a-gami-the-msi-x99a-gaming-pro-carbon-motherboard.png"
+			},
+			{
+				"id": 5055416,
+				"rating": 4.3,
+				"price": 250.99,
+				"old_price": 300.0,
+				"brand": "ASUS",
+				"type": "components",
+				"type_item": "motherboards",
+				"title": "ASUS ROG Maximus Z690 Hero (WiFi 6E) LGA 1700 Intel 12th Gen ATX Gaming Motherboard- PCIe 5.0,",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/7Q9KS10/kisspng-intel-x99-rgb-hi-fi-gaming-motherboard-x99a-gami-the-msi-x99a-gaming-pro-carbon-motherboard.png"
 			}
 		],
 		"hard_drives": [
@@ -328,6 +602,30 @@
 				"type": "components",
 				"type_item": "hard_drives",
 				"title": "WD Black 4TB Performance Desktop Hard Disk Drive - 7200 RPM SATA 6Gb/s 256MB Cache 3.5 Inch - WD4005FZBX",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/WB054w5/Uzt-Gwaro-EZ9m-Lwdm-setting-xxx-0-90-end-800.png"
+			},
+			{
+				"id": 6061,
+				"rating": 5,
+				"price": 210.99,
+				"old_price": 230.0,
+				"brand": "WD Black",
+				"type": "components",
+				"type_item": "hard_drives",
+				"title": "ASUS Dual Radeon RX 6500 XT Video Card DUAL-RX6500XT-O4G",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/WB054w5/Uzt-Gwaro-EZ9m-Lwdm-setting-xxx-0-90-end-800.png"
+			},
+			{
+				"id": 6062,
+				"rating": 5,
+				"price": 210.99,
+				"old_price": 230.0,
+				"brand": "WD Black",
+				"type": "components",
+				"type_item": "hard_drives",
+				"title": "ASUS Dual Radeon RX 6500 XT Video Card DUAL-RX6500XT-O4G",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/WB054w5/Uzt-Gwaro-EZ9m-Lwdm-setting-xxx-0-90-end-800.png"
 			}
@@ -344,6 +642,42 @@
 				"title": "LIAN LI GALAHAD AIO 360 RGB UNI FAN SL120 EDITION WHITE , Dual 120mm Addressable RGB Fans AIO CPU Liquid Cooler----GA-360SLA",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/9yC4tGd/cl-w285-pl12sw-a-02-1-1.png"
+			},
+			{
+				"id": 7071,
+				"rating": 4.3,
+				"price": 200.99,
+				"old_price": 220.0,
+				"brand": "LIAN LI",
+				"type": "components",
+				"type_item": "cooling",
+				"title": "ASUS Dual Radeon RX 6500 XT Video Card DUAL-RX6500XT-O4G",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/9yC4tGd/cl-w285-pl12sw-a-02-1-1.png"
+			},
+			{
+				"id": 7072,
+				"rating": 4.3,
+				"price": 200.99,
+				"old_price": 220.0,
+				"brand": "LIAN LI",
+				"type": "components",
+				"type_item": "cooling",
+				"title": "Thermaltake UX100 5V Motherboard Sync High Airflow Hydraulic Bearing ARGB Lighting CPU Cooler",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/9yC4tGd/cl-w285-pl12sw-a-02-1-1.png"
+			},
+			{
+				"id": 7073,
+				"rating": 4.3,
+				"price": 200.99,
+				"old_price": 220.0,
+				"brand": "LIAN LI",
+				"type": "components",
+				"type_item": "cooling",
+				"title": "Cooler Master MasterAir MA620M Dual Tower ARGB High Performance CPU Air Cooler, 6 CDC 2.0 Heatpipes,",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/9yC4tGd/cl-w285-pl12sw-a-02-1-1.png"
 			}
 		],
 		"power_supplies": [
@@ -356,6 +690,42 @@
 				"type": "components",
 				"type_item": "power_supplies",
 				"title": "GAMEMAX Power Supply 850W Fully Modular 80+ Gold Certified with Addressable RGB Light Mode, RGB-850",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/rQxbrdS/png-transparent-power-supply-unit-power-converters-80-plus-atx-electric-power-computer-electronics-c.png"
+			},
+			{
+				"id": 8011,
+				"rating": 4.3,
+				"price": 200.99,
+				"old_price": 210.0,
+				"brand": "GAMEMAX",
+				"type": "components",
+				"type_item": "power_supplies",
+				"title": "CORSAIR RM850 CP-9020235-NA 850 W ATX 80 PLUS GOLD Certified Full Modular Power Supply",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/rQxbrdS/png-transparent-power-supply-unit-power-converters-80-plus-atx-electric-power-computer-electronics-c.png"
+			},
+			{
+				"id": 8021,
+				"rating": 4.3,
+				"price": 200.99,
+				"old_price": 210.0,
+				"brand": "GAMEMAX",
+				"type": "components",
+				"type_item": "power_supplies",
+				"title": "Super Flower Leadex III 850W 80+ Gold, Three-Way ECO Mode Fanless, Silent & Cooling Mode, FDB Fan, Full Modular Power Supply, Dual Over Power Protection, SF-850F14HG",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/rQxbrdS/png-transparent-power-supply-unit-power-converters-80-plus-atx-electric-power-computer-electronics-c.png"
+			},
+			{
+				"id": 8031,
+				"rating": 4.3,
+				"price": 200.99,
+				"old_price": 210.0,
+				"brand": "GAMEMAX",
+				"type": "components",
+				"type_item": "power_supplies",
+				"title": "Super Flower Leadex III 850W 80+ Gold, Three-Way ECO Mode Fanless, Silent & Cooling Mode, FDB Fan, Full Modular Power Supply, Dual Over Power Protection, SF-850F14HG",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/rQxbrdS/png-transparent-power-supply-unit-power-converters-80-plus-atx-electric-power-computer-electronics-c.png"
 			}
@@ -372,6 +742,42 @@
 				"type": "accessories",
 				"type_item": "lights",
 				"title": "GUPUP 100 FT Long LED Strip Lights,Bluetooth LED Lights for Bedroom, Color Changing Light Strip with Music Sync, Smart Lights Controlled via Phone APP and IR Remote(APP+Remote +Mic/50ftx2).",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/47G5GrL/81u-Jft3-Iz-WS-AC-SX679-removebg-preview.png"
+			},
+			{
+				"id": 9019,
+				"rating": 1,
+				"price": 20,
+				"old_price": 30,
+				"brand": "GUPUP",
+				"type": "accessories",
+				"type_item": "lights",
+				"title": "Led Lights for Bedroom 100ft, LEELEBERD LED Lights with Remote and App Control ",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/47G5GrL/81u-Jft3-Iz-WS-AC-SX679-removebg-preview.png"
+			},
+			{
+				"id": 90249,
+				"rating": 1,
+				"price": 20,
+				"old_price": 30,
+				"brand": "GUPUP",
+				"type": "accessories",
+				"type_item": "lights",
+				"title": "QZYL 75ft LED Lights for Bedroom, RGB LED Strip Lights for Living Room, Party Decor with Dimmable",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/47G5GrL/81u-Jft3-Iz-WS-AC-SX679-removebg-preview.png"
+			},
+			{
+				"id": 9029,
+				"rating": 1,
+				"price": 20,
+				"old_price": 30,
+				"brand": "GUPUP",
+				"type": "accessories",
+				"type_item": "lights",
+				"title": "Led Strip Lights,60ft Led Light Strip Music Sync Color Changing RGB Led Strip Built-in Mic,Bluetooth App",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/47G5GrL/81u-Jft3-Iz-WS-AC-SX679-removebg-preview.png"
 			}
@@ -398,6 +804,30 @@
 				"type": "accessories",
 				"type_item": "chairs",
 				"title": "YSSOA Backrest and Seat Height Adjustable Swivel Recliner Racing Office Computer Ergonomic Video Game Chair, with footrest, Red",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/ynmTShz/toppng-com-corsair-t1-race-gaming-chair-1014x1800.png"
+			},
+			{
+				"id": 125,
+				"rating": 5,
+				"price": 555.0,
+				"old_price": 600.0,
+				"brand": "YSSOA",
+				"type": "accessories",
+				"type_item": "chairs",
+				"title": "DXRacer Formula Series Conventional Gaming Chair Mesh FD01 - Black & Red",
+				"description": "Eligible for Shipping To Mars or somewhere else",
+				"image": "https://i.ibb.co/ynmTShz/toppng-com-corsair-t1-race-gaming-chair-1014x1800.png"
+			},
+			{
+				"id": 126,
+				"rating": 5,
+				"price": 555.0,
+				"old_price": 600.0,
+				"brand": "YSSOA",
+				"type": "accessories",
+				"type_item": "chairs",
+				"title": "DXRacer Formula Series Conventional Mesh and PVC Leather FD101 - Black & Red",
 				"description": "Eligible for Shipping To Mars or somewhere else",
 				"image": "https://i.ibb.co/ynmTShz/toppng-com-corsair-t1-race-gaming-chair-1014x1800.png"
 			}
