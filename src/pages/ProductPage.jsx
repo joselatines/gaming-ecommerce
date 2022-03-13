@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import variables from '../components/assets/variables.json';
+import products from '../components/assets/products.json';
 import { Button } from '../components/Button';
 import { Product } from '../components/Product';
 import { GoHome } from '../components/GoHome';
 
 export function ProductPage() {
-
 	const { state } = useLocation();
 	const {
 		title,

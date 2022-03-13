@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledLink } from './ReactRouterStyled';
+
 
 import { Product } from './Product';
 export function Products(props) {
@@ -7,7 +7,7 @@ export function Products(props) {
 
 	return (
 		<Container>
-			<Product productData={array2} only={25} itemAdded={props.itemAdded} />
+			<Product productData={data} only={25} itemAdded={props.itemAdded} />
 		</Container>
 	);
 }

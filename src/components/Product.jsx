@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { Fragment } from 'react';
 
 import variables from './assets/variables.json';
 import { Button } from './Button';
 import { addItemToCart } from '../pages/CartPage';
+import { StyledLink } from './ReactRouterStyled';
 
 export function Product(props) {
 	const { productData, only, itemAdded } = props;
