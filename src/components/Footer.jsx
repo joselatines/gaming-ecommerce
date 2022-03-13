@@ -16,11 +16,11 @@ export function Footer() {
 				<ul>
 					<Title>Useful links</Title>
 					<UsefulLinks>
-						<li>Products</li>
-						<li>Products</li>
-						<li>Products</li>
-						<li>Products</li>
-						<li>Products</li>
+						<li>Example</li>
+						<li>Example</li>
+						<li>Example</li>
+						<li>Example</li>
+						<li>Example</li>
 					</UsefulLinks>
 				</ul>
 				<ul>
@@ -63,6 +63,7 @@ export function Footer() {
 }
 
 const Container = styled.footer`
+
 	background-color: ${variables.colors.bg_dark};
 	color: #fff;
 	display: grid;
@@ -90,11 +91,12 @@ const Container = styled.footer`
 			flex-direction: column;
 			gap: 1rem;
 			.singUp {
-				@media screen and (max-width: ${variables.mediaQueries.tablet}) {
+				@media screen and (max-width: ${variables.mediaQueries.laptop}) {
 					input[type='text'] {
-						width: 60%;
+						max-width: 50%;
 					}
 				}
+
 				input {
 					border-radius: unset;
 					outline: unset;
@@ -132,7 +134,7 @@ const Container = styled.footer`
 `;
 
 const Title = styled.span`
-	font-size: 1.1rem;
+	font-size: clamp(1rem, 1.5vw, 2rem); 
 	font-weight: 700;
 `;
 const UsefulLinks = styled.div`

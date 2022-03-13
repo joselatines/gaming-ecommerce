@@ -7,8 +7,8 @@ export function MainSection(props) {
 	const [data, setData] = useState(props.productsData.computers.gamers);
 
 	const changeData = (productType, type) => {
-		const minimized =
-			productType.charAt(0).toLowerCase() + productType.slice(1);
+		const blankSpaces = productType.replace(' ', '_');
+		const minimized = blankSpaces.charAt(0).toLowerCase() + blankSpaces.slice(1);
 
 		setData(props.productsData[type][minimized]);
 	};

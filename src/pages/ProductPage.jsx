@@ -161,6 +161,7 @@ const Right = styled.div`
 const Title = styled.div`
 	color: ${variables.colors.font_gray};
 	h1 {
+		font-size: clamp(1rem, 2.5vw, 2rem); 
 		color: #fff;
 		margin-bottom: 1rem;
 	}

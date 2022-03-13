@@ -67,6 +67,10 @@ const Container = styled.div`
 	.div {
 		padding: 5rem;
 		min-height: 100vh;
+		@media screen and (max-width: ${variables.mediaQueries.mobile_l}) {
+			padding: 1rem;
+
+		}
 		.productsContainer{
 			display: grid;
 			gap: 1rem;

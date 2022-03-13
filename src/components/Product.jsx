@@ -91,7 +91,7 @@ const deleteBTn = {
 
 const Container = styled.div`
 	transition: ${variables.transitions.short};
-	width: 15rem;
+	max-width: 15rem;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 16px;
 	padding: 15px;
