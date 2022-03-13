@@ -3,16 +3,22 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import variables from '../components/assets/variables.json';
-import { StyledLink } from '../components/ReactRouterStyled';
 import { Button } from '../components/Button';
 import { Product } from '../components/Product';
 import { GoHome } from '../components/GoHome';
 
 export function ProductPage() {
+
 	const { state } = useLocation();
-	const data = state.state.data;
-	const product = state.state.element;
-	const { title, description, image, components, secondary_images } = product;
+	const {
+		title,
+		description,
+		image,
+		components,
+		secondary_images,
+		type,
+		type_item,
+	} = state;
 
 	let productsNumber = 0;
 	let numberOfProducts = 3;
@@ -57,6 +63,7 @@ export function ProductPage() {
 									content='Buy now'
 								/>
 								<Button
+									dataItem={state}
 									icon={<ion-icon name='heart-outline'></ion-icon>}
 									color={variables.colors.secondary}
 									content='Add cart'
@@ -76,30 +83,7 @@ export function ProductPage() {
 					<ProductsContainer>
 						<h2>You might be interesting in...</h2>
 						<div className='container'>
-							{data.map((el) =>
-								productsNumber < numberOfProducts ? (
-									<StyledLink
-										to={`/product/${el.id}`}
-										state={{
-											state: {
-												element: el,
-												data: data,
-											},
-										}}
-										key={el.id}
-									>
-										<Product
-											title={el.title}
-											description={el.description}
-											price={el.price}
-											old_price={el.old_price}
-											image={el.image}
-											rating={el.rating}
-										/>
-										{sum()}
-									</StyledLink>
-								) : null
-							)}
+							<Product productData={products[type][type_item]} only={3} />
 						</div>
 						<GoHome />
 					</ProductsContainer>
@@ -120,6 +104,7 @@ const ImgContainer = styled.div`
 	img {
 		width: 100%;
 		height: 100%;
+		max-height: 500px;
 		object-fit: contain;
 	}
 `;
@@ -129,10 +114,14 @@ const Main = styled.header`
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: 0.9fr 1fr;
-	grid-template-rows: 400px;
 	padding: 6rem 5rem;
 	padding-bottom: 9rem;
+	align-items: center;
+	justify-content: center;
 	min-height: 100vh;
+	@media screen and (max-width: ${variables.mediaQueries.tablet}) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 const ImgsContainer = styled.div`
@@ -147,9 +136,10 @@ const ImgsContainer = styled.div`
 		width: 5rem;
 		height: 6rem;
 		border-radius: 90px 90px 0 0;
+		overflow: hidden;
 		img {
 			width: 100%;
-			object-fit: contain;
+			object-fit: cover;
 		}
 	}
 `;
@@ -187,6 +177,7 @@ const ProductsContainer = styled.div`
 	}
 	.container {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;

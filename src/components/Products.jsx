@@ -7,28 +7,7 @@ export function Products(props) {
 
 	return (
 		<Container>
-			{data.map((el) => (
-				<StyledLink
-					to={`product/${el.id}`}
-					state={{
-						state: {
-							element: el,
-							data: data,
-						},
-					}}
-					key={el.id}
-				>
-					<Product
-						title={el.title}
-						description={el.description}
-						price={el.price}
-						old_price={el.old_price}
-						image={el.image}
-						rating={el.rating}
-						addItemToCart={props.addItemToCart}
-					/>
-				</StyledLink>
-			))}
+			<Product productData={array2} only={25} itemAdded={props.itemAdded} />
 		</Container>
 	);
 }
@@ -37,6 +16,7 @@ const Container = styled.section`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
 	gap: 20px;
 	padding: 1rem;
 `;

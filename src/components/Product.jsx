@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { addItemToCart } from '../pages/CartPage';
 
 export function Product(props) {
-	const { title, description, image, price, old_price, id, rating } = props;
+	const { productData, only, itemAdded } = props;
 
 	let numberOfProducts = 0;
 	const sumNumber = () => {
@@ -19,54 +19,86 @@ export function Product(props) {
 	};
 
 	return (
-		<Container starScore={convertToPercentage(rating)} key={id}>
-			<div className='product__imgContainer'>
-				<img src={image} alt='pc gamer' />
-			</div>
-			<div className='product__content'>
-				<h2 className='product__content--title'>{title}</h2>
-				<div className='product__content--price'>
-					<span className='price--main'>${price}</span>
-					{old_price ? <span className='price--old'>${old_price}</span> : null}
-				</div>
-				<div className='product__content--description'>
-					<p>{description}</p>
-				</div>
-				<div className='product__content--ratingAndBtn'>
-					<div className='ratingAndBtn__rating'>
-						<div className='stars-outer'>
-							<div className='stars-inner'></div>
+		<Fragment>
+			{productData.map((product) =>
+				numberOfProducts < only ? (
+					<Container
+						starScore={convertToPercentage(product.rating)}
+						key={product.id}
+					>
+						<StyledLink
+							to={`/product/${product.id}`}
+							state={product}
+							key={product.id}
+						>
+							<div className='product__imgContainer'>
+								<img src={product.image} alt='pc gamer' />
+							</div>
+						</StyledLink>
+						<div className='product__content'>
+							<h3 className='product__content--title'>{product.title}</h3>
+							<div className='product__content--price'>
+								<span className='price--main'>${product.price}</span>
+								{product.old_price ? (
+									<span className='price--old'>${product.old_price}</span>
+								) : null}
+							</div>
+							<div className='product__content--description'>
+								<p>{product.description}</p>
+							</div>
 						</div>
-					</div>
-					<Button
-					className="btn"
-						onClick={() =>
-							addItemToCart({ title: 'I am a title', price: 2000 })
-						}
-						color={variables.colors.primary}
-						icon={<ion-icon name='heart-outline'></ion-icon>}
-						content='Read more'
-					/>
-				</div>
-			</div>
-			{sumNumber()}
-		</Container>
+						<div className='product__content--ratingAndBtn'>
+							<div className='ratingAndBtn__rating'>
+								<div className='stars-outer'>
+									<div className='stars-inner'></div>
+								</div>
+							</div>
+
+							{itemAdded ? (
+								<Button
+									dataItem={product}
+									color={variables.colors.red}
+									deleteBtn
+									icon={<ion-icon name='close-circle-outline'></ion-icon>}
+									content='Select'
+								/>
+							) : (
+								<Button
+									dataItem={product}
+									color={variables.colors.primary}
+									icon={<ion-icon name='heart-outline'></ion-icon>}
+									content='Add cart'
+								/>
+							)}
+						</div>
+						{sumNumber()}
+					</Container>
+				) : null
+			)}
+		</Fragment>
 	);
 }
 
-
+const deleteBTn = {
+	color: 'red',
+	fontSize: '26px',
+	position: 'absolute',
+	top: '10px',
+	left: '10px',
+};
 
 const Container = styled.div`
+	transition: ${variables.transitions.short};
 	width: 15rem;
-	height: auto;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 16px;
 	padding: 15px;
 	background-color: #fff;
 	color: ${variables.colors.font};
+	position: relative;
 	cursor: pointer;
-	.btn {
-		background: red;
+	&:hover {
+		transform: translateY(-10px);
 	}
 	.product__imgContainer {
 		width: 100%;
@@ -81,9 +113,14 @@ const Container = styled.div`
 		display: grid;
 		gap: 10px;
 		padding: 1rem 0;
+
 		.product__content--title {
 			font-size: 1rem;
 			font-weight: 700;
+
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 		.product__content--price {
 			font-size: 1.2rem;

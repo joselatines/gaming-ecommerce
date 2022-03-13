@@ -22,7 +22,6 @@ export function Slider() {
 						<motion.div key={id++} className='item'>
 							<img src={image} alt='' />
 						</motion.div>
-							
 					))}
 				</motion.div>
 			</motion.div>
@@ -38,7 +37,7 @@ const Container = styled.div`
 	.item {
 		width: 80%;
 		height: auto;
-        margin: 0 10px;
+		margin: 0 10px;
 	}
 	.item img {
 		width: 100%;
