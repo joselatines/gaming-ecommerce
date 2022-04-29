@@ -1,6 +1,6 @@
-# A simple frontend ecommerce built it in React Js
+# Frontend ecommerce built it in React Js 💻
 
-## Description
+## Description 📚
 
 This project was my first website I made in react js. I used concepts like hooks, styled components, ternary operators, spread operators, array methods, React Router, component elements, web hosting images, etc.
 
@@ -16,10 +16,3 @@ Click [here](https://drx-setup-ecommerce.netlify.app/) to see the website.
 - Framer motion
 - Styled components
 - React Router
-
-## My Social Media
-
-- [Portfolio](https://www.behance.net/doctordraxter)
-- [Instagram](https://www.instagram.com/doctordraxter/)
-- [FIverr](https://www.fiverr.com/doctordraxter?up_rollout=true)
-- [Linktree](https://linktr.ee/doctordraxter)
